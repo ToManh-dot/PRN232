@@ -1,0 +1,169 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    string currentController = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    string currentAction = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+    Func<string, string, string> isActive = (ctrl, act) =>
+        (string.Equals(currentController, ctrl, StringComparison.OrdinalIgnoreCase)
+         && (string.IsNullOrEmpty(act) || string.Equals(currentAction, act, StringComparison.OrdinalIgnoreCase)))
+        ? "active" : "";
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Marathon Manager</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+            <div class="container">
+                <a class="navbar-brand fw-bold" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="fas fa-running me-2"></i> Marathon Manager
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="mainNavbar" class="collapse navbar-collapse justify-content-between">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link @isActive("Home", "Index")"
+                               asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- đổi Blog/Index nếu bạn dùng controller khác -->
+                            <a class="nav-link @isActive("Blog", "Index")"
+                               asp-area="" asp-controller="Blog" asp-action="Index">Tin tức &amp; Sự kiện</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        @if (User.Identity?.IsAuthenticated ?? false)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown"
+                                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user-circle me-1"></i> Xin chào, @User.Identity!.Name
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <!-- Nếu có trang Profile riêng, map lại route ở đây -->
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="Profile">
+                                            Hồ sơ của tôi
+                                        </a>
+                                    </li>
+
+                                    <!-- Đường dẫn nhanh tới Runner Dashboard -->
+                                    @if (User.IsInRole("Runner"))
+                                    {
+                                        <li>
+                                            <a class="dropdown-item" asp-controller="Runner" asp-action="Index">
+                                                Giải chạy đã đăng ký
+                                            </a>
+                                        </li>
+                                    }
+
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <a class="dropdown-item fw-bold text-danger"
+                                               asp-controller="Admin" asp-action="Index">
+                                                <i class="fas fa-user-shield me-1"></i> Admin Dashboard
+                                            </a>
+                                        </li>
+                                    }
+                                    @if (User.IsInRole("Organizer"))
+                                    {
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <a class="dropdown-item fw-bold text-success"
+                                               asp-controller="Organizer" asp-action="Index">
+                                                <i class="fas fa-plus-circle me-1"></i> Quản lý Giải chạy
+                                            </a>
+                                        </li>
+                                    }
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li>
+                                        <form asp-controller="Account" asp-action="Logout" method="post" class="px-2">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="dropdown-item">
+                                                <i class="fas fa-sign-out-alt me-1"></i> Đăng xuất
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item me-2">
+                                <a class="btn btn-outline-light @isActive("Account", "Login")"
+                                   asp-controller="Account" asp-action="Login">
+                                    <i class="fas fa-sign-in-alt me-1"></i> Đăng nhập
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-primary @isActive("Account", "Register")"
+                                   asp-controller="Account" asp-action="Register">
+                                    <i class="fas fa-user-plus me-1"></i> Đăng ký
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Global TempData Alerts (hiển thị nếu page chưa tự hiện) -->
+    <div class="container" style="padding-top: 72px;">
+        @if (TempData["GlobalSuccess"] is string gOk && !string.IsNullOrWhiteSpace(gOk))
+        {
+            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                @gOk
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        @if (TempData["GlobalError"] is string gErr && !string.IsNullOrWhiteSpace(gErr))
+        {
+            <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                @gErr
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+    </div>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top footer bg-dark text-muted mt-5">
+        <div class="container text-white-50 py-3">
+            &copy; 2025 - Marathon Manager - <a class="link-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

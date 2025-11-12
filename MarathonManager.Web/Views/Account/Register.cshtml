@@ -1,0 +1,78 @@
+﻿@model MarathonManager.Web.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Đăng ký";
+    var returnUrl = (string?)Context.Request.Query["returnUrl"] ?? "/";
+}
+
+<div class="container" style="padding-top: 80px; padding-bottom: 80px;">
+    <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-8">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="fw-bold my-4">Tạo Tài Khoản Mới</h3>
+                </div>
+                <div class="card-body p-4 p-sm-5">
+
+                    @if (TempData["ErrorMessage"] is string err && !string.IsNullOrWhiteSpace(err))
+                    {
+                        <div class="alert alert-danger mb-3">@err</div>
+                    }
+                    @if (TempData["SuccessMessage"] is string ok && !string.IsNullOrWhiteSpace(ok))
+                    {
+                        <div class="alert alert-success mb-3">@ok</div>
+                    }
+
+                    <form asp-controller="Account"
+                          asp-action="Register"
+                          asp-route-returnUrl="@returnUrl"
+                          method="post"
+                          novalidate>
+                        @Html.AntiForgeryToken()
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="FullName" class="form-control" placeholder="Họ và Tên" autocomplete="name" />
+                            <label asp-for="FullName">Họ và Tên</label>
+                            <span asp-validation-for="FullName" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Email" class="form-control" placeholder="Email" autocomplete="email" />
+                            <label asp-for="Email">Email</label>
+                            <span asp-validation-for="Email" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Password" class="form-control" placeholder="Mật khẩu" autocomplete="new-password" />
+                            <label asp-for="Password">Mật khẩu</label>
+                            <span asp-validation-for="Password" class="text-danger small"></span>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="ConfirmPassword" class="form-control" placeholder="Xác nhận Mật khẩu" autocomplete="new-password" />
+                            <label asp-for="ConfirmPassword">Xác nhận Mật khẩu</label>
+                            <span asp-validation-for="ConfirmPassword" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-user-plus me-1"></i> Tạo tài khoản
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center py-3">
+                    <div class="small">
+                        Đã có tài khoản?
+                        <a asp-controller="Account" asp-action="Login" asp-route-returnUrl="@returnUrl">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aT0qMF+y7uOgdS6FdvmoG4defaC9tjQjz9ezIlsbkIU=",
+  "Hash": "RYqiGbELS38vVtruxK3m0vxo0U7Jav76X8aamLtWwhs=",
   "Source": "MarathonManager.Web",
   "BasePath": "_content/MarathonManager.Web",
   "Mode": "Default",
@@ -1759,7 +1759,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Nov 2025 16:04:36 GMT"
+          "Value": "Thu, 13 Nov 2025 07:02:03 GMT"
         }
       ],
       "EndpointProperties": [
@@ -1796,7 +1796,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Nov 2025 16:04:36 GMT"
+          "Value": "Thu, 13 Nov 2025 07:02:03 GMT"
         }
       ],
       "EndpointProperties": [

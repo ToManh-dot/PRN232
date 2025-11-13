@@ -1015,30 +1015,79 @@
         }
       }
     },
-    "/api/organizer/races/{raceId}/export": {
+    "/api/organizer/races/results": {
       "get": {
+        "tags": [
+          "OrganizerRaces"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MarathonManager.API.DTOs.Result.ResultDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MarathonManager.API.DTOs.Result.ResultDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MarathonManager.API.DTOs.Result.ResultDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/organizer/races/results/{resultId}": {
+      "put": {
         "tags": [
           "OrganizerRaces"
         ],
         "parameters": [
           {
-            "name": "raceId",
+            "name": "resultId",
             "in": "path",
             "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
             }
-          },
-          {
-            "name": "format",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "default": "excel"
-            }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarathonManager.API.DTOs.Result.UpdateResultDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarathonManager.API.DTOs.Result.UpdateResultDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarathonManager.API.DTOs.Result.UpdateResultDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -2646,6 +2695,88 @@
             "minimum": 1,
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MarathonManager.API.DTOs.Result.ResultDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "registrationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "runnerName": {
+            "type": "string",
+            "nullable": true
+          },
+          "raceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "distanceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "distanceInKm": {
+            "type": "number",
+            "format": "double"
+          },
+          "completionTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "overallRank": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "genderRank": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ageCategoryRank": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MarathonManager.API.DTOs.Result.UpdateResultDto": {
+        "type": "object",
+        "properties": {
+          "completionTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "overallRank": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "genderRank": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "ageCategoryRank": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

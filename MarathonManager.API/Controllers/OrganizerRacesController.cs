@@ -1,5 +1,6 @@
 ﻿using MarathonManager.API.DTOs.Race;
 using MarathonManager.API.DTOs.RaceDistances;
+using MarathonManager.API.DTOs.Result;
 using MarathonManager.API.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -279,68 +280,84 @@ public class OrganizerRacesController : ControllerBase
         await _context.SaveChangesAsync();
         return NoContent();
     }
-
-    [HttpGet("{raceId:int}/export")]
-    public async Task<IActionResult> ExportRegistrations(int raceId, [FromQuery] string format = "excel")
+    [HttpGet("results")]
+    public async Task<ActionResult<IEnumerable<ResultDto>>> GetAllResultsForOrganizer()
     {
         var organizerId = GetCurrentUserId();
 
-        var race = await _context.Races
-            .Include(r => r.RaceDistances).ThenInclude(rd => rd.Registrations)
-            .FirstOrDefaultAsync(r => r.Id == raceId && r.OrganizerId == organizerId);
-
-        if (race == null) return Forbid("Không có quyền.");
-
-        var data = race.RaceDistances
-            .SelectMany(rd => rd.Registrations)
-            .Where(reg => reg.PaymentStatus == "Paid")
-            .Select(reg => new
+        // Lấy toàn bộ kết quả thuộc các giải mà organizer đang tổ chức
+        var results = await _context.Results
+            .Include(r => r.Registration)
+                .ThenInclude(reg => reg.Runner)
+            .Include(r => r.Registration)
+                .ThenInclude(reg => reg.RaceDistance)
+                .ThenInclude(rd => rd.Race)
+            .Where(r => r.Registration.RaceDistance.Race.OrganizerId == organizerId)
+            .OrderByDescending(r => r.Registration.RaceDistance.Race.RaceDate)
+            .Select(r => new ResultDto
             {
-                Bib = reg.BibNumber ?? "Chưa gán",
-                Name = reg.Runner.FullName,
-                Email = reg.Runner.Email,
-                Phone = reg.Runner.PhoneNumber ?? "",
-                Gender = reg.Runner.Gender == "M" ? "Nam" : reg.Runner.Gender == "F" ? "Nữ" : "Khác",
-                DOB = reg.Runner.DateOfBirth?.ToString("dd/MM/yyyy") ?? "",
-                Distance = reg.RaceDistance.Name,
-                RegDate = reg.RegistrationDate.ToString("dd/MM/yyyy HH:mm")
+                Id = r.Id,
+                RegistrationId = r.RegistrationId,
+                RunnerName = r.Registration.Runner.FullName,
+                RaceName = r.Registration.RaceDistance.Race.Name,
+                DistanceName = r.Registration.RaceDistance.Name,
+                DistanceInKm = r.Registration.RaceDistance.DistanceInKm,
+                CompletionTime = r.CompletionTime.HasValue
+                    ? r.CompletionTime.Value.ToString(@"hh\:mm\:ss")
+                    : null,
+                OverallRank = r.OverallRank,
+                GenderRank = r.GenderRank,
+                AgeCategoryRank = r.AgeCategoryRank,
+                Status = r.Status
             })
-            .OrderBy(x => x.Distance).ThenBy(x => x.Name)
-            .ToList();
+            .ToListAsync();
 
-        if (!data.Any()) return NotFound("Không có VĐV.");
+        if (!results.Any())
+            return NotFound(new { message = "Không có kết quả nào cho các giải bạn tổ chức." });
 
-        var fileName = $"{Sanitize(race.Name)}_VDV_{DateTime.Now:yyyyMMdd}";
-
-        return format.Equals("csv", StringComparison.OrdinalIgnoreCase)
-            ? CsvFile(data, fileName)
-            : ExcelFile(data, fileName);
+        return Ok(results);
     }
 
-    private IActionResult ExcelFile(dynamic data, string name)
+    [HttpPut("results/{resultId:int}")]
+    public async Task<IActionResult> UpdateResult(int resultId, [FromBody] UpdateResultDto updateDto)
     {
-        using var wb = new ClosedXML.Excel.XLWorkbook();
-        var ws = wb.Worksheets.Add("VĐV");
-        ws.Cell(1, 1).InsertTable(data, true);
-        ws.Columns().AdjustToContents();
+        var result = await _context.Results
+            .Include(r => r.Registration)
+            .ThenInclude(reg => reg.RaceDistance)
+            .ThenInclude(rd => rd.Race)
+            .FirstOrDefaultAsync(r => r.Id == resultId);
 
-        var stream = new MemoryStream();
-        wb.SaveAs(stream);
-        stream.Position = 0;
+        if (result == null)
+            return NotFound(new { message = "Không tìm thấy kết quả." });
 
-        return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"{name}.xlsx");
+        var organizerId = GetCurrentUserId();
+        if (result.Registration.RaceDistance.Race.OrganizerId != organizerId)
+            return Forbid("Bạn không có quyền sửa kết quả này.");
+
+        if (!string.IsNullOrEmpty(updateDto.CompletionTime))
+        {
+            if (TimeOnly.TryParse(updateDto.CompletionTime, out var parsedTime))
+            {
+                result.CompletionTime = parsedTime;
+            }
+            else
+            {
+                return BadRequest(new { message = "CompletionTime không hợp lệ, phải có định dạng hh:mm:ss." });
+            }
+        }
+
+        result.OverallRank = updateDto.OverallRank;
+        result.GenderRank = updateDto.GenderRank;
+        result.AgeCategoryRank = updateDto.AgeCategoryRank;
+        if (!string.IsNullOrEmpty(updateDto.Status))
+            result.Status = updateDto.Status;
+
+        await _context.SaveChangesAsync();
+
+        return Ok(new { message = "Cập nhật kết quả thành công." });
     }
 
-    private IActionResult CsvFile(dynamic data, string name)
-    {
-        var csv = "Số BIB,Họ tên,Email,SĐT,Giới tính,Ngày sinh,Cự ly,Ngày đăng ký\n";
-        foreach (var r in data)
-            csv += $"{r.Bib},{r.Name},{r.Email},{r.Phone},{r.Gender},{r.DOB},{r.Distance},{r.RegDate}\n";
 
-        return File(Encoding.UTF8.GetBytes(csv), "text/csv", $"{name}.csv");
-    }
-
-    private string Sanitize(string s) => string.Join("_", s.Split(Path.GetInvalidFileNameChars()));
 
     private int GetCurrentUserId()
     {

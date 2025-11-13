@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KQVxtxh9QsV5sQi/SEKZo9ly98v8COZEgqNyeyLLdZU=",
+  "Hash": "+6lHEiBQOveFrp2qRP+WZtOiSQbPIMgCo/oCebWfF7w=",
   "Source": "MarathonManager.API",
   "BasePath": "_content/MarathonManager.API",
   "Mode": "Default",
@@ -434,7 +434,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Nov 2025 16:04:36 GMT"
+          "Value": "Thu, 13 Nov 2025 07:02:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -471,7 +471,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 12 Nov 2025 16:04:36 GMT"
+          "Value": "Thu, 13 Nov 2025 07:02:03 GMT"
         },
         {
           "Name": "Cache-Control",

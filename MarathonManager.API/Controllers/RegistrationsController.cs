@@ -1,8 +1,10 @@
-﻿using MarathonManager.API.DTOs.Registration; // Đảm bảo using đúng
+﻿using MarathonManager.API.DTOs.Registration;
 using MarathonManager.API.Models;
+using MarathonManager.API.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration; // THÊM
 using System.Security.Claims;
 
 [Route("api/[controller]")]
@@ -11,53 +13,39 @@ using System.Security.Claims;
 public class RegistrationsController : ControllerBase
 {
     private readonly MarathonManagerContext _context;
+    private readonly IConfiguration _config; // THÊM
 
-    public RegistrationsController(MarathonManagerContext context)
+    public RegistrationsController(MarathonManagerContext context, IConfiguration config) // THÊM config
     {
         _context = context;
+        _config = config;
     }
 
     // POST: api/Registrations
     [HttpPost]
     [Authorize(Roles = "Runner")]
-    // THAY ĐỔI TÊN DTO Ở ĐÂY
     public async Task<IActionResult> RegisterForRace([FromBody] RunnerRegistrationRequestDto registrationDto)
     {
         var runnerId = GetCurrentUserId();
 
-        // 1. Kiểm tra cự ly
         var raceDistance = await _context.RaceDistances
             .Include(rd => rd.Race)
-            .FirstOrDefaultAsync(rd => rd.Id == registrationDto.RaceDistanceId); // Dùng DTO mới
+            .FirstOrDefaultAsync(rd => rd.Id == registrationDto.RaceDistanceId);
 
         if (raceDistance == null || raceDistance.Race.Status != "Approved")
-        {
-            return NotFound(new { message = "Cự ly này không tồn tại hoặc giải chạy chưa được duyệt." });
-        }
+            return NotFound(new { message = "Cự ly không tồn tại hoặc giải chưa được duyệt." });
 
-        // 2. Kiểm tra đã đăng ký chưa
-        bool isAlreadyRegistered = await _context.Registrations
-            .AnyAsync(r => r.RunnerId == runnerId && r.RaceDistanceId == registrationDto.RaceDistanceId); // Dùng DTO mới
-
-        if (isAlreadyRegistered)
-        {
+        if (await _context.Registrations.AnyAsync(r => r.RunnerId == runnerId && r.RaceDistanceId == registrationDto.RaceDistanceId))
             return BadRequest(new { message = "Bạn đã đăng ký cự ly này rồi." });
-        }
 
-        // 3. Kiểm tra số lượng
-        int currentRegistrations = await _context.Registrations
-            .CountAsync(r => r.RaceDistanceId == registrationDto.RaceDistanceId); // Dùng DTO mới
+        int currentCount = await _context.Registrations.CountAsync(r => r.RaceDistanceId == registrationDto.RaceDistanceId);
+        if (currentCount >= raceDistance.MaxParticipants)
+            return BadRequest(new { message = "Cự ly đã hết chỗ." });
 
-        if (currentRegistrations >= raceDistance.MaxParticipants)
-        {
-            return BadRequest(new { message = "Cự ly này đã hết chỗ." });
-        }
-
-        // 4. Tạo đăng ký
         var newRegistration = new Registration
         {
             RunnerId = runnerId,
-            RaceDistanceId = registrationDto.RaceDistanceId, // Dùng DTO mới
+            RaceDistanceId = registrationDto.RaceDistanceId,
             RegistrationDate = DateTime.UtcNow,
             PaymentStatus = "Pending"
         };
@@ -65,21 +53,194 @@ public class RegistrationsController : ControllerBase
         _context.Registrations.Add(newRegistration);
         await _context.SaveChangesAsync();
 
-        // Có thể trả về thông tin đăng ký vừa tạo nếu cần
-        // var resultDto = new RegistrationDto { ... map từ newRegistration ... };
-        // return CreatedAtAction(nameof(GetMyRegistrationById), new { id = newRegistration.Id }, resultDto); // Cần tạo hàm GetMyRegistrationById
-
-        return Ok(new { message = "Đăng ký thành công! Vui lòng chờ thanh toán." });
+        return Ok(new { message = "Đăng ký thành công! Vui lòng thanh toán.", registrationId = newRegistration.Id });
     }
 
-    // ... (Hàm GetCurrentUserId giữ nguyên) ...
+    [HttpPost("{registrationId:int}/payment-url")]
+    [Authorize(Roles = "Runner")]
+    public IActionResult CreatePaymentUrl(int registrationId, [FromBody] PaymentRequestDto dto)
+    {
+        var reg = _context.Registrations
+            .Include(r => r.RaceDistance)
+            .FirstOrDefault(r => r.Id == registrationId && r.RunnerId == GetCurrentUserId());
+
+        if (reg == null || reg.PaymentStatus != "Pending")
+            return BadRequest(new { message = "Không thể thanh toán." });
+
+        // 1️⃣ Kiểm tra ReturnUrl hợp lệ (bắt buộc phải là https hoặc http công khai)
+        if (string.IsNullOrWhiteSpace(dto.ReturnUrl) ||
+            !Uri.TryCreate(dto.ReturnUrl, UriKind.Absolute, out var uri) ||
+            (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
+        {
+            return BadRequest(new { message = "ReturnUrl không hợp lệ. Phải là URL HTTPS công khai (ngrok hoặc frontend domain)." });
+        }
+
+        // 2️⃣ Khởi tạo đối tượng VNPAY
+        var vnpay = new VnPayLibrary();
+
+        var amount = (int)(reg.RaceDistance.RegistrationFee * 100); // phải nhân 100 và là số nguyên
+
+        // 3️⃣ Thêm dữ liệu gửi sang VNPAY (theo đúng chuẩn)
+        vnpay.AddRequestData("vnp_Version", "2.1.0");
+        vnpay.AddRequestData("vnp_Command", "pay");
+        vnpay.AddRequestData("vnp_TmnCode", _config["VNPAY:TmnCode"]);
+        vnpay.AddRequestData("vnp_Amount", amount.ToString());
+        vnpay.AddRequestData("vnp_CreateDate", DateTime.Now.ToString("yyyyMMddHHmmss"));
+        vnpay.AddRequestData("vnp_CurrCode", "VND");
+
+        // Lấy IP thực của client (nếu gọi qua reverse proxy)
+        var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1";
+        if (ipAddress == "::1") ipAddress = "127.0.0.1";
+        vnpay.AddRequestData("vnp_IpAddr", ipAddress);
+
+        vnpay.AddRequestData("vnp_Locale", "vn");
+        vnpay.AddRequestData("vnp_OrderInfo", $"Thanh toan dang ky ID {registrationId}");
+        vnpay.AddRequestData("vnp_OrderType", "other");
+
+        // ReturnUrl bắt buộc không chứa space, encode kỹ
+        vnpay.AddRequestData("vnp_ReturnUrl", dto.ReturnUrl.Trim());
+
+        // TxnRef phải là chuỗi ngắn, không ký tự đặc biệt
+        vnpay.AddRequestData("vnp_TxnRef", registrationId.ToString());
+
+        // 4️⃣ Tạo URL
+        string paymentUrl = vnpay.CreateRequestUrl(
+            _config["VNPAY:Url"],
+            _config["VNPAY:HashSecret"]
+        );
+
+        // 5️⃣ In log để dễ debug
+        Console.WriteLine("🔗 VNPAY Payment URL: " + paymentUrl);
+
+        // 6️⃣ Trả về frontend
+        return Ok(new { paymentUrl });
+    }
+
+    // GET: api/Registrations/return
+    [HttpGet("return")]
+    [AllowAnonymous]
+    public async Task<IActionResult> PaymentReturn()
+    {
+        var vnpay = new VnPayLibrary();
+
+        Console.WriteLine("===== VNPAY RETURN START =====");
+        Console.WriteLine("Query string received:");
+
+        foreach (var key in Request.Query.Keys)
+        {
+            var value = Request.Query[key];
+            Console.WriteLine($"{key} = {value}");
+            if (key.StartsWith("vnp_"))
+                vnpay.AddResponseData(key, value);
+        }
+
+        var txnRefStr = vnpay.GetResponseData("vnp_TxnRef");
+        var responseCode = vnpay.GetResponseData("vnp_ResponseCode");
+        var transactionStatus = vnpay.GetResponseData("vnp_TransactionStatus");
+
+        Console.WriteLine($"txnRef = {txnRefStr}");
+        Console.WriteLine($"responseCode = {responseCode}");
+        Console.WriteLine($"transactionStatus = {transactionStatus}");
+
+        bool validSignature = vnpay.ValidateSignature(_config["VNPAY:HashSecret"]);
+        Console.WriteLine("Signature valid: " + validSignature);
+
+        if (!validSignature)
+        {
+            Console.WriteLine("❌ Signature không hợp lệ");
+            return Redirect("/payment-failed?error=invalid_signature");
+        }
+
+        if (responseCode == "00" && transactionStatus == "00")
+        {
+            Console.WriteLine("✅ Thanh toán thành công, cập nhật DB");
+            var reg = await _context.Registrations.FirstOrDefaultAsync(r => r.Id == int.Parse(txnRefStr));
+            if (reg != null)
+            {
+                reg.PaymentStatus = "Paid";
+                await _context.SaveChangesAsync();
+                Console.WriteLine($"PaymentStatus của registrationId={txnRefStr} đã cập nhật thành Paid");
+            }
+            return Redirect("/payment-success?regId=" + txnRefStr);
+        }
+
+        Console.WriteLine("❌ Thanh toán thất bại hoặc bị hủy");
+        return Redirect($"/payment-failed?regId={txnRefStr}&code={responseCode}");
+    }
+
+
+
+    // POST: api/Registrations/{raceId}/assign-bib
+    [HttpPost("{raceId:int}/assign-bib")]
+    [Authorize(Roles = "Organizer")]
+    public async Task<IActionResult> AssignBibAutomatically(int raceId)
+    {
+        var race = await _context.Races
+            .Include(r => r.RaceDistances).ThenInclude(d => d.Registrations)
+            .FirstOrDefaultAsync(r => r.Id == raceId && r.OrganizerId == GetCurrentUserId());
+
+        if (race == null) return Forbid();
+
+        var paidNoBib = race.RaceDistances
+            .SelectMany(d => d.Registrations)
+            .Where(r => r.PaymentStatus == "Paid" && string.IsNullOrEmpty(r.BibNumber))
+            .OrderBy(r => r.RegistrationDate)
+            .ToList();
+
+        if (!paidNoBib.Any())
+            return Ok(new { message = "Không có VĐV nào cần gán BIB." });
+
+        int nextBib = await _context.Registrations
+            .Where(r => r.RaceDistance.RaceId == raceId && !string.IsNullOrEmpty(r.BibNumber))
+            .Select(r => Convert.ToInt32(r.BibNumber))
+            .DefaultIfEmpty(1000)
+            .MaxAsync() + 1;
+
+        foreach (var reg in paidNoBib)
+            reg.BibNumber = nextBib++.ToString("D4"); // 1001, 1002...
+
+        await _context.SaveChangesAsync();
+
+        return Ok(new
+        {
+            message = $"Đã gán {paidNoBib.Count} BIB từ {nextBib - paidNoBib.Count:D4} đến {(nextBib - 1):D4}"
+        });
+    }
+
     private int GetCurrentUserId()
     {
-        // Thêm kiểm tra Parse an toàn hơn
-        if (int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out int userId))
-        {
-            return userId;
-        }
-        throw new InvalidOperationException("Không thể xác định ID người dùng từ token.");
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+            throw new UnauthorizedAccessException("Không thể xác định người dùng.");
+        return userId;
+    }
+
+    [HttpGet("test-return-url")]
+    [AllowAnonymous]
+    public IActionResult GenerateTestReturnUrl()
+    {
+        string hashSecret = _config["VNPAY:HashSecret"];
+        string txnRef = "1";
+
+        var queryParams = new SortedDictionary<string, string>
+    {
+        {"vnp_Amount", "100000"},
+        {"vnp_BankCode", "NCB"},
+        {"vnp_TxnRef", txnRef},
+        {"vnp_ResponseCode", "00"}
+    };
+
+        // Build data string để hash
+        var hashData = string.Join("&", queryParams.Select(kvp => $"{kvp.Key}={kvp.Value}"));
+
+        // Tạo chữ ký SHA256
+        using var hmac = new System.Security.Cryptography.HMACSHA256(System.Text.Encoding.UTF8.GetBytes(hashSecret));
+        var hashBytes = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(hashData));
+        string secureHash = BitConverter.ToString(hashBytes).Replace("-", "");
+
+        // Thêm chữ ký vào URL
+        var baseUrl = "http://localhost:5000/payment/return";
+        var fullUrl = $"{baseUrl}?{hashData}&vnp_SecureHash={secureHash}";
+        return Ok(fullUrl);
     }
 }

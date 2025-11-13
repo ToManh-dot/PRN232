@@ -37,7 +37,7 @@ namespace MarathonManager.Web.Controllers
             List<RaceSummaryDto> myRaces = new List<RaceSummaryDto>();
             try
             {
-                var response = await client.GetAsync("/api/Races/my-races");
+                var response = await client.GetAsync("api/organizer/races/my-races");
                 if (response.IsSuccessStatusCode)
                 {
                     var json = await response.Content.ReadAsStringAsync();
@@ -186,7 +186,7 @@ namespace MarathonManager.Web.Controllers
             List<RaceDistanceDto> distances = new List<RaceDistanceDto>();
              try
             {
-                var response = await client.GetAsync($"/api/Races/{raceId}/distances");
+                var response = await client.GetAsync($"/api/organizer/races/{raceId}/distances");
                 if (response.IsSuccessStatusCode)
                 {
                     var json = await response.Content.ReadAsStringAsync();

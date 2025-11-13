@@ -564,8 +564,29 @@
   },
   {
     "ContainingType": "MarathonManager.API.Controllers.OrganizerRacesController",
+    "Method": "ExportRegistrations",
+    "RelativePath": "api/organizer/races/{raceId}/export",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "raceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "format",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarathonManager.API.Controllers.OrganizerRacesController",
     "Method": "GetMyRaces",
-    "RelativePath": "api/organizer/races/my",
+    "RelativePath": "api/organizer/races/my-races",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -688,6 +709,63 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegistrationsController",
+    "Method": "AssignBibAutomatically",
+    "RelativePath": "api/Registrations/{raceId}/assign-bib",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "raceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegistrationsController",
+    "Method": "CreatePaymentUrl",
+    "RelativePath": "api/Registrations/{registrationId}/payment-url",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registrationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MarathonManager.API.DTOs.Registration.PaymentRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegistrationsController",
+    "Method": "PaymentReturn",
+    "RelativePath": "api/Registrations/return",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegistrationsController",
+    "Method": "GenerateTestReturnUrl",
+    "RelativePath": "api/Registrations/test-return-url",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

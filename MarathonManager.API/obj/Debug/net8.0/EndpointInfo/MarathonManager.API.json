@@ -645,7 +645,7 @@
         }
       }
     },
-    "/api/organizer/races/my": {
+    "/api/organizer/races/my-races": {
       "get": {
         "tags": [
           "OrganizerRaces"
@@ -1015,6 +1015,37 @@
         }
       }
     },
+    "/api/organizer/races/{raceId}/export": {
+      "get": {
+        "tags": [
+          "OrganizerRaces"
+        ],
+        "parameters": [
+          {
+            "name": "raceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "excel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/public/races": {
       "get": {
         "tags": [
@@ -1195,6 +1226,95 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Registrations/{registrationId}/payment-url": {
+      "post": {
+        "tags": [
+          "Registrations"
+        ],
+        "parameters": [
+          {
+            "name": "registrationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarathonManager.API.DTOs.Registration.PaymentRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarathonManager.API.DTOs.Registration.PaymentRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarathonManager.API.DTOs.Registration.PaymentRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Registrations/return": {
+      "get": {
+        "tags": [
+          "Registrations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Registrations/{raceId}/assign-bib": {
+      "post": {
+        "tags": [
+          "Registrations"
+        ],
+        "parameters": [
+          {
+            "name": "raceId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Registrations/test-return-url": {
+      "get": {
+        "tags": [
+          "Registrations"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -2501,6 +2621,16 @@
           "startTime": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MarathonManager.API.DTOs.Registration.PaymentRequestDto": {
+        "type": "object",
+        "properties": {
+          "returnUrl": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

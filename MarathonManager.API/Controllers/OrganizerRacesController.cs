@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace MarathonManager.API.Controllers;
@@ -25,7 +26,7 @@ public class OrganizerRacesController : ControllerBase
         _environment = environment;
     }
 
-    [HttpGet("my")]
+    [HttpGet("my-races")]
     public async Task<ActionResult<IEnumerable<RaceSummaryDto>>> GetMyRaces()
     {
         var organizerId = GetCurrentUserId();
@@ -279,10 +280,74 @@ public class OrganizerRacesController : ControllerBase
         return NoContent();
     }
 
+    [HttpGet("{raceId:int}/export")]
+    public async Task<IActionResult> ExportRegistrations(int raceId, [FromQuery] string format = "excel")
+    {
+        var organizerId = GetCurrentUserId();
+
+        var race = await _context.Races
+            .Include(r => r.RaceDistances).ThenInclude(rd => rd.Registrations)
+            .FirstOrDefaultAsync(r => r.Id == raceId && r.OrganizerId == organizerId);
+
+        if (race == null) return Forbid("Không có quyền.");
+
+        var data = race.RaceDistances
+            .SelectMany(rd => rd.Registrations)
+            .Where(reg => reg.PaymentStatus == "Paid")
+            .Select(reg => new
+            {
+                Bib = reg.BibNumber ?? "Chưa gán",
+                Name = reg.Runner.FullName,
+                Email = reg.Runner.Email,
+                Phone = reg.Runner.PhoneNumber ?? "",
+                Gender = reg.Runner.Gender == "M" ? "Nam" : reg.Runner.Gender == "F" ? "Nữ" : "Khác",
+                DOB = reg.Runner.DateOfBirth?.ToString("dd/MM/yyyy") ?? "",
+                Distance = reg.RaceDistance.Name,
+                RegDate = reg.RegistrationDate.ToString("dd/MM/yyyy HH:mm")
+            })
+            .OrderBy(x => x.Distance).ThenBy(x => x.Name)
+            .ToList();
+
+        if (!data.Any()) return NotFound("Không có VĐV.");
+
+        var fileName = $"{Sanitize(race.Name)}_VDV_{DateTime.Now:yyyyMMdd}";
+
+        return format.Equals("csv", StringComparison.OrdinalIgnoreCase)
+            ? CsvFile(data, fileName)
+            : ExcelFile(data, fileName);
+    }
+
+    private IActionResult ExcelFile(dynamic data, string name)
+    {
+        using var wb = new ClosedXML.Excel.XLWorkbook();
+        var ws = wb.Worksheets.Add("VĐV");
+        ws.Cell(1, 1).InsertTable(data, true);
+        ws.Columns().AdjustToContents();
+
+        var stream = new MemoryStream();
+        wb.SaveAs(stream);
+        stream.Position = 0;
+
+        return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", $"{name}.xlsx");
+    }
+
+    private IActionResult CsvFile(dynamic data, string name)
+    {
+        var csv = "Số BIB,Họ tên,Email,SĐT,Giới tính,Ngày sinh,Cự ly,Ngày đăng ký\n";
+        foreach (var r in data)
+            csv += $"{r.Bib},{r.Name},{r.Email},{r.Phone},{r.Gender},{r.DOB},{r.Distance},{r.RegDate}\n";
+
+        return File(Encoding.UTF8.GetBytes(csv), "text/csv", $"{name}.csv");
+    }
+
+    private string Sanitize(string s) => string.Join("_", s.Split(Path.GetInvalidFileNameChars()));
+
     private int GetCurrentUserId()
     {
         if (int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var id))
             return id;
         throw new InvalidOperationException("Không thể xác định ID người dùng từ token.");
     }
+
+
 }

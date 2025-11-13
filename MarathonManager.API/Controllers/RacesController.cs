@@ -37,7 +37,8 @@ namespace MarathonManager.API.Controllers
                     Location = r.Location,
                     RaceDate = r.RaceDate,
                     ImageUrl = r.ImageUrl,
-                    Status = r.Status
+                    Status = r.Status,
+                    OrganizerName = r.Organizer.FullName
                 })
                 .ToListAsync();
 

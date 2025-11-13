@@ -284,3 +284,4 @@ C:\Users\DELL\PRN232\PRN232-main\MarathonManager.Web\obj\Debug\net8.0\refint\Mar
 C:\Users\DELL\PRN232\PRN232-main\MarathonManager.Web\obj\Debug\net8.0\MarathonManager.Web.pdb
 C:\Users\DELL\PRN232\PRN232-main\MarathonManager.Web\obj\Debug\net8.0\MarathonManager.Web.genruntimeconfig.cache
 C:\Users\DELL\PRN232\PRN232-main\MarathonManager.Web\obj\Debug\net8.0\ref\MarathonManager.Web.dll
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.Web\obj\Debug\net8.0\MarathonManager.Web.sourcelink.json

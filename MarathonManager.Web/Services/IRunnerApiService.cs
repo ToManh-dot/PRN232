@@ -7,7 +7,7 @@ namespace MarathonManager.Web.Services
     {
         Task<ApiResponseDto<RunnerDashboardDto>> GetDashboardAsync();
         Task<ApiResponseDto<PaginatedResponseDto<AvailableRaceDto>>> GetAvailableRacesAsync(int pageNumber = 1, int pageSize = 6);
-        Task<ApiResponseDto<RaceDetailDto>> GetRaceDetailsAsync(int raceId);
+        Task<ApiResponseDto<RaceDetailsDto>> GetRaceDetailsAsync(int raceId);
         Task<ApiResponseDto<MyRegistrationDto>> RegisterForRaceAsync(RegisterForRaceRequest request);
         Task<ApiResponseDto<PaginatedResponseDto<MyRegistrationDto>>> GetMyRegistrationsAsync(int pageNumber = 1, int pageSize = 10);
         Task<ApiResponseDto<object>> CancelRegistrationAsync(int registrationId);

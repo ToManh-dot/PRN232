@@ -35,8 +35,8 @@ namespace MarathonManager.Web.Services
         public async Task<ApiResponseDto<PaginatedResponseDto<AvailableRaceDto>>> GetAvailableRacesAsync(int pageNumber = 1, int pageSize = 6)
             => await GetAsync<PaginatedResponseDto<AvailableRaceDto>>($"/api/runner/available?pageNumber={pageNumber}&pageSize={pageSize}");
 
-        public async Task<ApiResponseDto<RaceDetailDto>> GetRaceDetailsAsync(int raceId)
-            => await GetAsync<RaceDetailDto>($"/api/runner/races/{raceId}/details");
+        public async Task<ApiResponseDto<RaceDetailsDto>> GetRaceDetailsAsync(int raceId)
+            => await GetAsync<RaceDetailsDto>($"/api/runner/races/{raceId}/details");
 
         public async Task<ApiResponseDto<MyRegistrationDto>> RegisterForRaceAsync(RegisterForRaceRequest request)
             => await PostAsync<MyRegistrationDto>("/api/runner/register", request);

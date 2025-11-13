@@ -1,5 +1,6 @@
 ﻿using MarathonManager.API.DTOs.Race;
 using MarathonManager.API.DTOs.RaceDistances;
+using MarathonManager.API.DTOs.Result;
 using MarathonManager.API.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace MarathonManager.API.Controllers;
@@ -25,7 +27,7 @@ public class OrganizerRacesController : ControllerBase
         _environment = environment;
     }
 
-    [HttpGet("my")]
+    [HttpGet("my-races")]
     public async Task<ActionResult<IEnumerable<RaceSummaryDto>>> GetMyRaces()
     {
         var organizerId = GetCurrentUserId();
@@ -278,6 +280,84 @@ public class OrganizerRacesController : ControllerBase
         await _context.SaveChangesAsync();
         return NoContent();
     }
+    [HttpGet("results")]
+    public async Task<ActionResult<IEnumerable<ResultDto>>> GetAllResultsForOrganizer()
+    {
+        var organizerId = GetCurrentUserId();
+
+        // Lấy toàn bộ kết quả thuộc các giải mà organizer đang tổ chức
+        var results = await _context.Results
+            .Include(r => r.Registration)
+                .ThenInclude(reg => reg.Runner)
+            .Include(r => r.Registration)
+                .ThenInclude(reg => reg.RaceDistance)
+                .ThenInclude(rd => rd.Race)
+            .Where(r => r.Registration.RaceDistance.Race.OrganizerId == organizerId)
+            .OrderByDescending(r => r.Registration.RaceDistance.Race.RaceDate)
+            .Select(r => new ResultDto
+            {
+                Id = r.Id,
+                RegistrationId = r.RegistrationId,
+                RunnerName = r.Registration.Runner.FullName,
+                RaceName = r.Registration.RaceDistance.Race.Name,
+                DistanceName = r.Registration.RaceDistance.Name,
+                DistanceInKm = r.Registration.RaceDistance.DistanceInKm,
+                CompletionTime = r.CompletionTime.HasValue
+                    ? r.CompletionTime.Value.ToString(@"hh\:mm\:ss")
+                    : null,
+                OverallRank = r.OverallRank,
+                GenderRank = r.GenderRank,
+                AgeCategoryRank = r.AgeCategoryRank,
+                Status = r.Status
+            })
+            .ToListAsync();
+
+        if (!results.Any())
+            return NotFound(new { message = "Không có kết quả nào cho các giải bạn tổ chức." });
+
+        return Ok(results);
+    }
+
+    [HttpPut("results/{resultId:int}")]
+    public async Task<IActionResult> UpdateResult(int resultId, [FromBody] UpdateResultDto updateDto)
+    {
+        var result = await _context.Results
+            .Include(r => r.Registration)
+            .ThenInclude(reg => reg.RaceDistance)
+            .ThenInclude(rd => rd.Race)
+            .FirstOrDefaultAsync(r => r.Id == resultId);
+
+        if (result == null)
+            return NotFound(new { message = "Không tìm thấy kết quả." });
+
+        var organizerId = GetCurrentUserId();
+        if (result.Registration.RaceDistance.Race.OrganizerId != organizerId)
+            return Forbid("Bạn không có quyền sửa kết quả này.");
+
+        if (!string.IsNullOrEmpty(updateDto.CompletionTime))
+        {
+            if (TimeOnly.TryParse(updateDto.CompletionTime, out var parsedTime))
+            {
+                result.CompletionTime = parsedTime;
+            }
+            else
+            {
+                return BadRequest(new { message = "CompletionTime không hợp lệ, phải có định dạng hh:mm:ss." });
+            }
+        }
+
+        result.OverallRank = updateDto.OverallRank;
+        result.GenderRank = updateDto.GenderRank;
+        result.AgeCategoryRank = updateDto.AgeCategoryRank;
+        if (!string.IsNullOrEmpty(updateDto.Status))
+            result.Status = updateDto.Status;
+
+        await _context.SaveChangesAsync();
+
+        return Ok(new { message = "Cập nhật kết quả thành công." });
+    }
+
+
 
     private int GetCurrentUserId()
     {
@@ -285,4 +365,6 @@ public class OrganizerRacesController : ControllerBase
             return id;
         throw new InvalidOperationException("Không thể xác định ID người dùng từ token.");
     }
+
+
 }

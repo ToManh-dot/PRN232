@@ -565,7 +565,7 @@
   {
     "ContainingType": "MarathonManager.API.Controllers.OrganizerRacesController",
     "Method": "GetMyRaces",
-    "RelativePath": "api/organizer/races/my",
+    "RelativePath": "api/organizer/races/my-races",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -581,6 +581,47 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "MarathonManager.API.Controllers.OrganizerRacesController",
+    "Method": "GetAllResultsForOrganizer",
+    "RelativePath": "api/organizer/races/results",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[MarathonManager.API.DTOs.Result.ResultDto, MarathonManager.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MarathonManager.API.Controllers.OrganizerRacesController",
+    "Method": "UpdateResult",
+    "RelativePath": "api/organizer/races/results/{resultId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "resultId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDto",
+        "Type": "MarathonManager.API.DTOs.Result.UpdateResultDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "MarathonManager.API.Controllers.PublicRacesController",
@@ -688,6 +729,63 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegistrationsController",
+    "Method": "AssignBibAutomatically",
+    "RelativePath": "api/Registrations/{raceId}/assign-bib",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "raceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegistrationsController",
+    "Method": "CreatePaymentUrl",
+    "RelativePath": "api/Registrations/{registrationId}/payment-url",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registrationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MarathonManager.API.DTOs.Registration.PaymentRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegistrationsController",
+    "Method": "PaymentReturn",
+    "RelativePath": "api/Registrations/return",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegistrationsController",
+    "Method": "GenerateTestReturnUrl",
+    "RelativePath": "api/Registrations/test-return-url",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

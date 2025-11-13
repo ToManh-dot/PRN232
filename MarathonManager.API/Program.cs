@@ -1,4 +1,5 @@
 ﻿using MarathonManager.API.Models;
+using MarathonManager.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,8 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
             "https://localhost:7245", // 👈 cổng web thực tế khi bạn chạy MarathonManager.Web
-            "http://localhost:7245"
+            "http://localhost:7245",
+            "https://flor-rasorial-edyth.ngrok-free.dev"
         )
         .AllowAnyHeader()
         .AllowAnyMethod()
@@ -73,6 +75,7 @@ var connectionString = builder.Configuration.GetConnectionString("MyCnn");
 builder.Services.AddDbContext<MarathonManagerContext>(options =>
     options.UseSqlServer(connectionString));
 
+builder.Services.AddScoped<VnPayLibrary>();
 // 1. Cấu hình Identity
 builder.Services.AddIdentity<User, IdentityRole<int>>(options =>
 {

@@ -495,6 +495,88 @@
       ]
     },
     {
+      "Route": "_content/MarathonManager.API/images/races/9b5223a3-0bf4-4131-9678-55dc94ca1025.jpg",
+      "AssetFile": "_content/MarathonManager.API/images/races/9b5223a3-0bf4-4131-9678-55dc94ca1025.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86266"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7obz8jRWYzSlkwfrBg5pcQiwmTMaeYQchLUyi+CpouA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 16:24:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7obz8jRWYzSlkwfrBg5pcQiwmTMaeYQchLUyi+CpouA="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MarathonManager.API/images/races/9b5223a3-0bf4-4131-9678-55dc94ca1025.yg7dykekvy.jpg",
+      "AssetFile": "_content/MarathonManager.API/images/races/9b5223a3-0bf4-4131-9678-55dc94ca1025.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "86266"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7obz8jRWYzSlkwfrBg5pcQiwmTMaeYQchLUyi+CpouA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Nov 2025 16:24:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yg7dykekvy"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7obz8jRWYzSlkwfrBg5pcQiwmTMaeYQchLUyi+CpouA="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/MarathonManager.API/images/races/9b5223a3-0bf4-4131-9678-55dc94ca1025.jpg"
+        }
+      ]
+    },
+    {
       "Route": "_content/MarathonManager.API/images/races/c1665cc7-ecd1-445a-bfce-14207a50194b.2dsnnegrjr.png",
       "AssetFile": "_content/MarathonManager.API/images/races/c1665cc7-ecd1-445a-bfce-14207a50194b.png",
       "Selectors": [],

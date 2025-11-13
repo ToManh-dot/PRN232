@@ -19,9 +19,12 @@
         <h1 class="display-3 fw-bold animate-fade-in-down">CHINH PHỤC MỌI ĐƯỜNG ĐUA</h1>
         <p class="lead fs-4 mb-4 animate-fade-in-up">Tìm kiếm, đăng ký và theo dõi kết quả các giải chạy marathon hàng đầu Việt Nam.</p>
         <div>
-            <a asp-controller="Account" asp-action="Register" class="btn btn-primary btn-lg me-2 animate-zoom-in">
-                <i class="fas fa-user-plus me-1"></i> Đăng ký ngay
-            </a>
+            @if (!User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Account" asp-action="Register" class="btn btn-primary btn-lg me-2 animate-zoom-in">
+                    <i class="fas fa-user-plus me-1"></i> Đăng ký ngay
+                </a>
+            }
             <a href="#cac-giai-chay" class="btn btn-outline-light btn-lg animate-zoom-in">
                 <i class="fas fa-running me-1"></i> Xem các giải chạy
             </a>
@@ -73,17 +76,18 @@
         </div>
     </div>
 </section>
-
-<section class="cta-section bg-primary text-white text-center py-5">
-    <div class="container">
-        <h2 class="display-5 fw-bold">Bắt Đầu Hành Trình Của Bạn!</h2>
-        <p class="lead mb-4">Tham gia cộng đồng hàng ngàn Vận động viên. Đăng ký tài khoản ngay hôm nay.</p>
-        <a asp-controller="Account" asp-action="Register" class="btn btn-light btn-lg text-primary fw-bold">
-            <i class="fas fa-user-plus me-1"></i> Tạo tài khoản
-        </a>
-    </div>
-</section>
-
+@if (!User.Identity.IsAuthenticated)
+{
+    <section class="cta-section bg-primary text-white text-center py-5">
+        <div class="container">
+            <h2 class="display-5 fw-bold">Bắt Đầu Hành Trình Của Bạn!</h2>
+            <p class="lead mb-4">Tham gia cộng đồng hàng ngàn Vận động viên. Đăng ký tài khoản ngay hôm nay.</p>
+            <a asp-controller="Account" asp-action="Register" class="btn btn-light btn-lg text-primary fw-bold">
+                <i class="fas fa-user-plus me-1"></i> Tạo tài khoản
+            </a>
+        </div>
+    </section>
+}
 <section id="tin-tuc" class="py-5 bg-light">
     <div class="container">
         <h2 class="section-header">Tin Tức & Sự Kiện</h2>

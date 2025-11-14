@@ -214,6 +214,11 @@ public class OrganizerRacesController : ControllerBase
         var race = await _context.Races.FindAsync(raceId);
         if (race == null) return NotFound("Không tìm thấy giải chạy.");
 
+        if (createDto.StartTime < DateTime.UtcNow.Date)
+        {
+            return BadRequest(new { message = "Ngày giải chạy không được trước ngày hiện tại." });
+        }
+
         var organizerId = GetCurrentUserId();
         if (race.OrganizerId != organizerId) return Forbid("Bạn không có quyền thêm cự ly cho giải chạy này.");
         if (race.Status != "Pending" && race.Status != "Approved")

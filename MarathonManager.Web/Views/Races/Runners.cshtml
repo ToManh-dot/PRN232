@@ -1,0 +1,42 @@
+﻿@model List<MarathonManager.Web.DTOs.Race.RunnersInRaceDto>
+
+@{
+    ViewData["Title"] = "Danh sách Runner";
+}
+
+<div class="container" style="padding-top: 80px; padding-bottom: 80px;">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="display-4 fw-bold">
+            <i class="fas fa-users me-2 text-warning"></i> Runner của giải chạy
+        </h1>
+    </div>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info">
+            Chưa có runner nào đăng ký.
+        </div>
+    }
+    else
+    {
+        <table class="table table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>#</th>
+                    <th>Họ và tên</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <td>@(i + 1)</td>
+                        <td>@Model[i].FullName</td>
+                        <td>@Model[i].Email</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

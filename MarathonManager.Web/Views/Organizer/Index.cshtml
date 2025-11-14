@@ -60,13 +60,16 @@
 							<a asp-action="ManageDistances" asp-route-raceId="@race.Id" class="btn btn-sm btn-primary" title="Quản lý cự ly">
 								<i class="fas fa-road me-1"></i> Cự ly
 							</a>
-							<button type="button"
-									class="btn btn-sm btn-info"
-									data-bs-toggle="modal"
-									data-bs-target="#editRaceModal"
-									data-race-id="@race.Id">
-								<i class="fas fa-edit"></i> Sửa
-							</button>
+							@* <button type="button" *@
+							@* 		class="btn btn-sm btn-info" *@
+							@* 		data-bs-toggle="modal" *@
+							@* 		data-bs-target="#editRaceModal" *@
+							@* 		data-race-id="@race.Id"> *@
+							@* 	<i class="fas fa-edit"></i> Sửa *@
+							@* </button> *@
+							<a asp-action="Runners" asp-controller="Races" asp-route-raceId="@race.Id" class="btn btn-sm btn-warning" title="Danh sách Runner">
+								<i class="fas fa-users me-1"></i> Runner
+							</a>
 						</td>
 					</tr>
 				}

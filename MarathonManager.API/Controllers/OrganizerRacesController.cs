@@ -59,6 +59,12 @@ public class OrganizerRacesController : ControllerBase
     {
         if (!ModelState.IsValid) return BadRequest(ModelState);
 
+        if (raceDto.RaceDate.Date < DateTime.UtcNow.Date)
+        {
+            return BadRequest(new { message = "Ngày giải chạy không được trước ngày hiện tại." });
+        }
+
+
         var organizerId = GetCurrentUserId();
         string? imageUrlPath = null;
 
@@ -207,6 +213,11 @@ public class OrganizerRacesController : ControllerBase
     {
         var race = await _context.Races.FindAsync(raceId);
         if (race == null) return NotFound("Không tìm thấy giải chạy.");
+
+        if (createDto.StartTime < DateTime.UtcNow.Date)
+        {
+            return BadRequest(new { message = "Ngày giải chạy không được trước ngày hiện tại." });
+        }
 
         var organizerId = GetCurrentUserId();
         if (race.OrganizerId != organizerId) return Forbid("Bạn không có quyền thêm cự ly cho giải chạy này.");
@@ -357,7 +368,36 @@ public class OrganizerRacesController : ControllerBase
         return Ok(new { message = "Cập nhật kết quả thành công." });
     }
 
+    [HttpGet("distances/{distanceId:int}")]
+    public async Task<ActionResult<RaceDistanceDto>> GetDistanceById(int distanceId)
+    {
+        if (distanceId <= 0)
+            return BadRequest("ID không hợp lệ.");
 
+        // Lấy cự ly, bao gồm Race để kiểm tra quyền của Organizer
+        var distance = await _context.RaceDistances
+            .Include(d => d.Race)
+            .FirstOrDefaultAsync(d => d.Id == distanceId);
+
+        if (distance == null)
+            return NotFound("Không tìm thấy cự ly.");
+
+        var organizerId = GetCurrentUserId();
+        if (distance.Race.OrganizerId != organizerId)
+            return Forbid("Bạn không có quyền xem cự ly này.");
+
+        var dto = new RaceDistanceDto
+        {
+            Id = distance.Id,
+            Name = distance.Name,
+            DistanceInKm = distance.DistanceInKm,
+            RegistrationFee = distance.RegistrationFee,
+            MaxParticipants = distance.MaxParticipants,
+            StartTime = distance.StartTime
+        };
+
+        return Ok(dto);
+    }
 
     private int GetCurrentUserId()
     {

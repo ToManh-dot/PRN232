@@ -126,7 +126,7 @@ namespace MarathonManager.Web.Controllers
             try
             {
                 // HttpClient sẽ đọc và giải phóng stream khi gửi
-                response = await client.PostAsync("/api/Races", content);
+                response = await client.PostAsync("api/organizer/races", content);
             }
             catch (HttpRequestException ex)
             {
@@ -241,7 +241,7 @@ namespace MarathonManager.Web.Controllers
             HttpResponseMessage response = null;
             try
             {
-                response = await client.PostAsync($"/api/Races/{dto.RaceId}/distances", jsonContent);
+                response = await client.PostAsync($"/api/organizer/races/{dto.RaceId}/distances", jsonContent);
                 if (response.IsSuccessStatusCode)
                 {
                     TempData["SuccessMessage"] = "Thêm cự ly thành công!";

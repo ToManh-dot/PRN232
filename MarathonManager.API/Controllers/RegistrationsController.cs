@@ -56,6 +56,33 @@ public class RegistrationsController : ControllerBase
         return Ok(new { message = "Đăng ký thành công! Vui lòng thanh toán.", registrationId = newRegistration.Id });
     }
 
+    // POST: api/Registrations/{registrationId}/pay
+    [HttpPost("{registrationId}/pay")]
+    [Authorize(Roles = "Runner")]
+    public async Task<IActionResult> PayRegistration(int registrationId)
+    {
+        var runnerId = GetCurrentUserId();
+
+        // Tìm registration của runner
+        var registration = await _context.Registrations
+            .Include(r => r.RaceDistance)
+            .ThenInclude(rd => rd.Race)
+            .FirstOrDefaultAsync(r => r.Id == registrationId && r.RunnerId == runnerId);
+
+        if (registration == null)
+            return NotFound(new { message = "Không tìm thấy đăng ký này." });
+
+        if (registration.PaymentStatus == "Paid")
+            return BadRequest(new { message = "Đã thanh toán trước đó." });
+
+        // Cập nhật trạng thái thanh toán
+        registration.PaymentStatus = "Paid";
+        _context.Registrations.Update(registration);
+        await _context.SaveChangesAsync();
+
+        return Ok(new { message = "Thanh toán thành công!", registrationId = registration.Id });
+    }
+
     [HttpPost("{registrationId:int}/payment-url")]
     [Authorize(Roles = "Runner")]
     public IActionResult CreatePaymentUrl(int registrationId, [FromBody] PaymentRequestDto dto)

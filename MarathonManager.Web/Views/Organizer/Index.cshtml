@@ -1,72 +1,223 @@
 ﻿@model List<MarathonManager.Web.DTOs.RaceSummaryDto>
 @{
-    ViewData["Title"] = "Quản lý Giải chạy";
+	ViewData["Title"] = "Quản lý Giải chạy";
 }
 
 <div class="container" style="padding-top: 80px; padding-bottom: 80px;">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="display-4 fw-bold">
-            <i class="fas fa-plus-circle me-2 text-success"></i> Giải chạy của tôi
-        </h1>
-        <a asp-action="Create" class="btn btn-primary btn-lg">
-            <i class="fas fa-plus me-1"></i> Tạo giải chạy mới
-        </a>
-    </div>
+	<div class="d-flex justify-content-between align-items-center mb-4">
+		<h1 class="display-4 fw-bold">
+			<i class="fas fa-plus-circle me-2 text-success"></i> Giải chạy của tôi
+		</h1>
+		<a asp-action="Create" class="btn btn-primary btn-lg">
+			<i class="fas fa-plus me-1"></i> Tạo giải chạy mới
+		</a>
+	</div>
 
-    @if (Model == null || !Model.Any())
-    {
-        <div class="alert alert-info">
-            Bạn chưa tạo giải chạy nào. Hãy nhấn "Tạo giải chạy mới".
-        </div>
-    }
-    else
-    {
-        <table class="table table-hover align-middle">
-            <thead class="table-light">
-                <tr>
-                    <th>Tên Giải</th>
-                    <th>Địa điểm</th>
-                    <th>Ngày chạy</th>
-                    <th>Trạng thái</th>
-                    <th>Hành động</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var race in Model)
-                {
-                    <tr>
-                        <td>@race.Name</td>
-                        <td>@race.Location</td>
-                        <td>@race.RaceDate.ToString("dd/MM/yyyy")</td>
-                        <td>
-                            @if (race.Status == "Pending")
-                            {
-                                <span class="badge bg-warning text-dark">Chờ duyệt</span>
-                            }
-                            else if (race.Status == "Approved")
-                            {
-                                <span class="badge bg-success">Đã duyệt</span>
-                            }
-                            else if (race.Status == "Cancelled")
-                            {
-                                <span class="badge bg-danger">Đã hủy</span>
-                            }
-                            else
-                            {
-                                <span class="badge bg-secondary">@race.Status</span>
-                            }
-                        </td>
-                        <td>
-                            <a asp-action="ManageDistances" asp-route-raceId="@race.Id" class="btn btn-sm btn-primary" title="Quản lý cự ly">
-                                <i class="fas fa-road me-1"></i> Cự ly
-                            </a>
-                            <a href="#" class="btn btn-sm btn-info disabled" title="Sửa thông tin giải">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    }
+	@if (Model == null || !Model.Any())
+	{
+		<div class="alert alert-info">
+			Bạn chưa tạo giải chạy nào. Hãy nhấn "Tạo giải chạy mới".
+		</div>
+	}
+	else
+	{
+		<table class="table table-hover align-middle">
+			<thead class="table-light">
+				<tr>
+					<th>Tên Giải</th>
+					<th>Địa điểm</th>
+					<th>Ngày chạy</th>
+					<th>Trạng thái</th>
+					<th>Hành động</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var race in Model)
+				{
+					<tr>
+						<td>@race.Name</td>
+						<td>@race.Location</td>
+						<td>@race.RaceDate.ToString("dd/MM/yyyy")</td>
+						<td>
+							@if (race.Status == "Pending")
+							{
+								<span class="badge bg-warning text-dark">Chờ duyệt</span>
+							}
+							else if (race.Status == "Approved")
+							{
+								<span class="badge bg-success">Đã duyệt</span>
+							}
+							else if (race.Status == "Cancelled")
+							{
+								<span class="badge bg-danger">Đã hủy</span>
+							}
+							else
+							{
+								<span class="badge bg-secondary">@race.Status</span>
+							}
+						</td>
+						<td>
+							<a asp-action="ManageDistances" asp-route-raceId="@race.Id" class="btn btn-sm btn-primary" title="Quản lý cự ly">
+								<i class="fas fa-road me-1"></i> Cự ly
+							</a>
+							@* <button type="button" *@
+							@* 		class="btn btn-sm btn-info" *@
+							@* 		data-bs-toggle="modal" *@
+							@* 		data-bs-target="#editRaceModal" *@
+							@* 		data-race-id="@race.Id"> *@
+							@* 	<i class="fas fa-edit"></i> Sửa *@
+							@* </button> *@
+							<a asp-action="Runners" asp-controller="Races" asp-route-raceId="@race.Id" class="btn btn-sm btn-warning" title="Danh sách Runner">
+								<i class="fas fa-users me-1"></i> Runner
+							</a>
+						</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+		<!-- Modal: Edit Race -->
+		<div class="modal fade" id="editRaceModal" tabindex="-1" aria-labelledby="editRaceModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<form id="editRaceForm">
+						<div class="modal-header">
+							<h5 class="modal-title" id="editRaceModalLabel">
+								<i class="fas fa-edit me-2 text-info"></i> Sửa thông tin giải
+							</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+						</div>
+
+						<div class="modal-body">
+							<input type="hidden" id="editRaceId" />
+
+							<div class="mb-3">
+								<label class="form-label fw-bold">Tên giải</label>
+								<input type="text" id="editRaceName" class="form-control" required />
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label fw-bold">Địa điểm</label>
+								<input type="text" id="editRaceLocation" class="form-control" required />
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label fw-bold">Ngày chạy</label>
+								<input type="date" id="editRaceDate" class="form-control" required />
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label fw-bold">Mô tả</label>
+								<textarea id="editRaceDescription" class="form-control" rows="3"></textarea>
+							</div>
+
+							<div class="mb-3">
+								<label class="form-label fw-bold">Ảnh (URL)</label>
+								<input type="text" id="editRaceImageUrl" class="form-control" />
+							</div>
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+								<i class="fas fa-times me-1"></i> Hủy
+							</button>
+							<button type="submit" class="btn btn-success">
+								<i class="fas fa-save me-1"></i> Lưu thay đổi
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	}
 </div>
+@section Scripts {
+	<script>
+		const apiBase = 'https://localhost:7280/api/races'; // đổi nếu API base khác
+		const modal = document.getElementById('editRaceModal');
+		const form = document.getElementById('editRaceForm');
+		// Hàm tiện ích để lấy token từ cookie
+		function getCookie(name) {
+			const value = `; ${document.cookie}`;
+			const parts = value.split(`; ${name}=`);
+			if (parts.length === 2) return parts.pop().split(';').shift();
+		}
+
+		// Khi mở modal: tải dữ liệu
+		modal.addEventListener('show.bs.modal', async event => {
+			const button = event.relatedTarget;
+			const raceId = button.getAttribute('data-race-id');
+			document.getElementById('editRaceId').value = raceId;
+
+			try {
+				const token = getCookie('AuthToken'); // 👈 Lấy token từ cookie
+				const res = await fetch(`${apiBase}/manage/${raceId}`, {
+				headers: {
+					'Authorization': `Bearer ${token}`
+				}
+				});
+				if (!res.ok) throw new Error('Không thể tải dữ liệu');
+				const data = await res.json();
+
+				document.getElementById('editRaceName').value = data.name || '';
+				document.getElementById('editRaceLocation').value = data.location || '';
+				document.getElementById('editRaceDate').value = data.raceDate.split('T')[0];
+				document.getElementById('editRaceDescription').value = data.description || '';
+				document.getElementById('editRaceImageUrl').value = data.imageUrl || '';
+			} catch (err) {
+				alert('Lỗi khi tải dữ liệu giải: ' + err.message);
+			}
+		});
+
+		// Khi nhấn "Lưu thay đổi"
+		form.addEventListener('submit', async e => {
+			e.preventDefault();
+
+			const race = {
+				id: document.getElementById('editRaceId').value,
+				name: document.getElementById('editRaceName').value,
+				location: document.getElementById('editRaceLocation').value,
+				raceDate: document.getElementById('editRaceDate').value,
+				description: document.getElementById('editRaceDescription').value,
+				imageUrl: document.getElementById('editRaceImageUrl').value
+			};
+
+			try {
+				const token = getCookie('AuthToken');
+				const res = await fetch(`${apiBase}/${race.id}`, {
+					method: 'PUT',
+					headers: {
+						'Content-Type': 'application/json',
+						'Authorization': `Bearer ${token}`
+					},
+					body: JSON.stringify(race)
+				});
+
+
+				if (!res.ok) throw new Error('Không thể lưu thay đổi');
+
+				bootstrap.Modal.getInstance(modal).hide();
+				showToast('Cập nhật thành công!');
+				setTimeout(() => location.reload(), 800);
+			} catch (err) {
+				showToast('❌ Lỗi: ' + err.message, true);
+			}
+		});
+
+		// Thông báo Toast
+		function showToast(msg, isError = false) {
+			const toast = document.createElement('div');
+			toast.className = `toast align-items-center text-white ${isError ? 'bg-danger' : 'bg-success'} border-0 position-fixed bottom-0 end-0 m-3`;
+			toast.innerHTML = `
+				<div class="d-flex">
+					<div class="toast-body">${msg}</div>
+					<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+				</div>`;
+			document.body.appendChild(toast);
+			const bsToast = new bootstrap.Toast(toast, { delay: 3000 });
+			bsToast.show();
+			toast.addEventListener('hidden.bs.toast', () => toast.remove());
+		}
+
+	</script>
+}

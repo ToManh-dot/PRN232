@@ -564,6 +564,32 @@
   },
   {
     "ContainingType": "MarathonManager.API.Controllers.OrganizerRacesController",
+    "Method": "GetDistanceById",
+    "RelativePath": "api/organizer/races/distances/{distanceId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "distanceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MarathonManager.API.DTOs.Race.RaceDistanceDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MarathonManager.API.Controllers.OrganizerRacesController",
     "Method": "GetMyRaces",
     "RelativePath": "api/organizer/races/my-races",
     "HttpMethod": "GET",

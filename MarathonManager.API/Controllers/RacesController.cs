@@ -81,5 +81,51 @@ namespace MarathonManager.API.Controllers
 
             return Ok(race);
         }
+
+        // API/Controllers/RacesController.cs
+        [HttpGet("manage/{id:int}")]
+        [Authorize(Roles = "Organizer,Admin")]
+        public async Task<ActionResult<RaceUpdateDto>> GetRaceForEdit(int id)
+        {
+            var race = await _context.Races
+                .Where(r => r.Id == id)
+                .Select(r => new RaceUpdateDto
+                {
+                    Id = r.Id,
+                    Name = r.Name,
+                    Description = r.Description,
+                    Location = r.Location,
+                    RaceDate = r.RaceDate,
+                    ImageUrl = r.ImageUrl
+                })
+                .FirstOrDefaultAsync();
+
+            if (race == null)
+                return NotFound(new { message = "Không tìm thấy giải chạy." });
+
+            return Ok(race);
+        }
+
+        // PUT: api/races/{id} — Cập nhật thông tin giải
+        [HttpPut("{id:int}")]
+        [Authorize(Roles = "Organizer")]
+        public async Task<IActionResult> UpdateRace(int id, [FromBody] RaceUpdateDto dto)
+        {
+            if (id != dto.Id) return BadRequest("Id không khớp");
+
+            var race = await _context.Races.FindAsync(id);
+            if (race == null) return NotFound("Không tìm thấy giải chạy.");
+
+            race.Name = dto.Name;
+            race.Description = dto.Description;
+            race.Location = dto.Location;
+            race.RaceDate = dto.RaceDate;
+            race.ImageUrl = dto.ImageUrl;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Cập nhật giải chạy thành công" });
+        }
+
     }
 }

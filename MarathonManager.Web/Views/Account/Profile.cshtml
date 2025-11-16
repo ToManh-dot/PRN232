@@ -1,0 +1,45 @@
+﻿@model MarathonManager.Web.ViewModels.UserProfileViewModel
+@{
+    ViewData["Title"] = "Thông tin cá nhân";
+}
+
+<div class="container" style="padding-top:80px; padding-bottom:80px;">
+    <h2 class="mb-4"><i class="fas fa-user-circle me-2"></i>Thông tin cá nhân</h2>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+    }
+
+    @if (Model != null)
+    {
+        <div class="card shadow">
+            <div class="card-body">
+                <ul class="list-group list-group-flush fs-5">
+                    <li class="list-group-item"><strong>Họ tên:</strong> @Model.FullName</li>
+                    <li class="list-group-item"><strong>Tên đăng nhập:</strong> @Model.UserName</li>
+                    <li class="list-group-item"><strong>Email:</strong> @Model.Email</li>
+                    <li class="list-group-item"><strong>Số điện thoại:</strong> @(string.IsNullOrEmpty(Model.PhoneNumber) ? "(Chưa cập nhật)" : Model.PhoneNumber)</li>
+                    <li class="list-group-item"><strong>Ngày sinh:</strong> @(Model.DateOfBirth?.ToString("dd/MM/yyyy") ?? "(Chưa cập nhật)")</li>
+                    <li class="list-group-item"><strong>Giới tính:</strong> @(string.IsNullOrEmpty(Model.Gender) ? "(Chưa cập nhật)" : Model.Gender)</li>
+                    <li class="list-group-item"><strong>Ngày tạo tài khoản:</strong> @Model.CreatedAt.ToString("dd/MM/yyyy")</li>
+                    <li class="list-group-item">
+                        <strong>Trạng thái:</strong>
+                        @if (Model.IsActive)
+                        {
+                            <span class="badge bg-success">Hoạt động</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">Bị khóa</span>
+                        }
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">Đang tải thông tin người dùng...</div>
+    }
+</div>

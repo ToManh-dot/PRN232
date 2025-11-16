@@ -1,6 +1,7 @@
 ﻿@model MarathonManager.Web.ViewModels.AdminUserDetailsViewModel
 @{
     ViewData["Title"] = "Chi tiết Người dùng";
+    bool isAdminUser = Model.User.Roles.Contains("Admin");
 }
 
 <div class="container" style="padding-top: 80px; padding-bottom: 80px;">
@@ -73,37 +74,46 @@
 
                 <div class="col-md-6 border-start">
                     <h4>Quản lý Vai trò (Roles)</h4>
-                    <p>Chọn các vai trò bạn muốn gán cho người dùng này.</p>
-
-                    <form asp-controller="Admin" asp-action="UpdateUserRoles" method="post">
-                        @Html.AntiForgeryToken()
-                        <input type="hidden" name="userId" value="@Model.User.Id" />
-
-                        <div class="form-group">
-                            @foreach (var role in Model.AllRoles)
-                            {
-                                var hasRole = (Model.User.Roles?.Contains(role.Name) ?? false);
-
-                                <div class="form-check fs-5 my-2">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           name="selectedRoles"
-                                           value="@role.Name"
-                                           id="role-@role.Id"
-                                           @(hasRole ? "checked" : "") />
-
-                                    <label class="form-check-label" for="role-@role.Id">
-                                        @role.Name
-                                    </label>
-                                </div>
-                            }
+                    @if (isAdminUser)
+                    {
+                        <div class="alert alert-warning">
+                            <i class="fas fa-exclamation-triangle me-1"></i>
+                            Người dùng này là <strong>Admin</strong> — bạn không thể chỉnh sửa vai trò của họ.
                         </div>
+                    }
+                    else
+                    {
+                        <p>Chọn các vai trò bạn muốn gán cho người dùng này.</p>
+                        <form asp-action="UpdateUserRoles" method="post">
+                            <input type="hidden" name="userId" value="@Model.User.Id" />
 
-                        <hr />
-                        <button type="submit" class="btn btn-primary w-100">
-                            <i class="fas fa-save me-1"></i> Lưu thay đổi Roles
-                        </button>
-                    </form>
+                            <div class="form-group">
+                                @foreach (var role in Model.AllRoles)
+                                {
+                                    // Kiểm tra xem user có role này không
+                                    bool isChecked = Model.User.Roles.Contains(role.Name);
+
+                                    <div class="form-check fs-5 my-2">
+                                        <input class="form-check-input"
+                                               type="checkbox"
+                                               name="selectedRoles"
+                                               value="@role.Name"
+                                               id="role-@role.Id"
+                                               @(isChecked ? "checked" : "")>
+
+                                        <label class="form-check-label" for="role-@role.Id">
+                                            @role.Name
+                                        </label>
+                                    </div>
+                                }
+                            </div>
+
+                            <hr />
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-save me-1"></i> Lưu thay đổi Roles
+                            </button>
+                        </form>
+                    }
                 </div>
             </div>
         </div>

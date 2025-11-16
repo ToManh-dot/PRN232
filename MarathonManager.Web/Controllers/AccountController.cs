@@ -195,5 +195,36 @@ namespace MarathonManager.Web.Controllers
             [JsonProperty("token")]
             public string Token { get; set; }
         }
+        // ===================================
+        // GET: /Account/Profile
+        // Hiển thị thông tin người dùng hiện tại
+        // ===================================
+        [HttpGet]
+        public async Task<IActionResult> Profile()
+        {
+            var token = _httpContextAccessor.HttpContext.Request.Cookies["AuthToken"];
+            if (string.IsNullOrEmpty(token))
+            {
+                TempData["ErrorMessage"] = "Bạn cần đăng nhập để xem thông tin cá nhân.";
+                return RedirectToAction("Login");
+            }
+
+            var client = _httpClientFactory.CreateClient("MarathonApi");
+            client.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+            var response = await client.GetAsync("/api/accounts/profile");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                TempData["ErrorMessage"] = "Không thể tải thông tin người dùng.";
+                return View();
+            }
+
+            var json = await response.Content.ReadAsStringAsync();
+            var profile = JsonConvert.DeserializeObject<UserProfileViewModel>(json);
+
+            return View(profile);
+        }
     }
 }

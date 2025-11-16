@@ -1,4 +1,5 @@
 ﻿using MarathonManager.Web.DTOs;
+using MarathonManager.Web.DTOs.Race;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -95,6 +96,34 @@ namespace MarathonManager.Web.Controllers
             }
 
             return NotFound("Không tìm thấy giải chạy.");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Runners(int raceId)
+        {
+            var client = _httpClientFactory.CreateClient("MarathonApi");
+
+            // Lấy JWT từ cookie
+            var token = _httpContextAccessor.HttpContext?.Request?.Cookies["AuthToken"];
+            if (string.IsNullOrEmpty(token))
+            {
+                TempData["ErrorMessage"] = "Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.";
+                return RedirectToAction("Login", "Account");
+            }
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+            // Gọi API backend
+            var response = await client.GetAsync($"/api/races/{raceId}/runners");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                var runners = JsonConvert.DeserializeObject<List<RunnersInRaceDto>>(jsonString);
+                return View(runners); // View sẽ nhận List<RunnersInRaceDto>
+            }
+
+            TempData["ErrorMessage"] = "Không thể lấy danh sách runner.";
+            return RedirectToAction("Runners", new { id = raceId });
         }
     }
 }

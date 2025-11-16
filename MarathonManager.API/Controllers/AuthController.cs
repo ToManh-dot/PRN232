@@ -46,11 +46,11 @@ namespace MarathonManager.API.Controllers
             {
                 return Unauthorized(new { message = "Email hoặc mật khẩu không đúng." });
             }
-            //var passwordValid = await _userManager.CheckPasswordAsync(user, loginDto.Password);
-            //if (!passwordValid)
-            //{
-            //    return Unauthorized(new { message = "Email hoặc mật khẩu không đúng." });
-            //}
+            var passwordValid = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+            if (!passwordValid)
+            {
+                return Unauthorized(new { message = "Email hoặc mật khẩu không đúng." });
+            }
 
             // 3. Kiểm tra tài khoản có bị khóa không (logic nghiệp vụ của bạn)
             if (!user.IsActive)
@@ -286,5 +286,52 @@ Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua emai
 
             return Ok(new { message = "Tạo Roles (và tài khoản Admin) thành công." });
         }
+//#if DEBUG   // Đảm bảo chỉ build trong Debug, không dùng cho Production
+//        // POST: api/auth/debug-reset-password
+//        [HttpPost("debug-reset-password")]
+//        public async Task<IActionResult> DebugResetPassword([FromBody] DebugResetPasswordDto dto)
+//        {
+//            if (string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.NewPassword))
+//            {
+//                return BadRequest(new { message = "Email và mật khẩu mới không được để trống." });
+//            }
+
+//            var user = await _userManager.FindByEmailAsync(dto.Email);
+//            if (user == null)
+//            {
+//                return NotFound(new { message = "Không tìm thấy user với email này." });
+//            }
+
+//            // Xóa mật khẩu cũ (nếu có)
+//            var removeResult = await _userManager.RemovePasswordAsync(user);
+//            if (!removeResult.Succeeded)
+//            {
+//                return BadRequest(new
+//                {
+//                    message = "Không thể xóa mật khẩu cũ.",
+//                    errors = removeResult.Errors.Select(e => e.Description)
+//                });
+//            }
+
+//            // Thêm mật khẩu mới
+//            var addResult = await _userManager.AddPasswordAsync(user, dto.NewPassword);
+//            if (!addResult.Succeeded)
+//            {
+//                return BadRequest(new
+//                {
+//                    message = "Không thể đặt mật khẩu mới.",
+//                    errors = addResult.Errors.Select(e => e.Description)
+//                });
+//            }
+
+//            return Ok(new
+//            {
+//                message = "Đặt lại mật khẩu thành công.",
+//                email = dto.Email,
+//                newPassword = dto.NewPassword
+//            });
+//        }
+//#endif
+
     }
 }

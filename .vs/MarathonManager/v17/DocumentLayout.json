@@ -1,318 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\prn232_project\\PRN232\\",
+  "WorkspaceRootPath": "C:\\Users\\DELL\\PRN232\\PRN232-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\controllers\\organizerracescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\organizerracescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\_distanceformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\_distanceformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\controllers\\organizercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\controllers\\organizercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\controllers\\racescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\racescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\controllers\\racescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\controllers\\racescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\migrations\\20251116161813_addresetpasswordcolumnstouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\migrations\\20251116161813_addresetpasswordcolumnstouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\marathonmanager.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\marathonmanager.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\managedistances.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\managedistances.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:1:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\controllers\\adminracescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\adminracescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\viewmodels\\admindashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\viewmodels\\admindashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\admin\\userdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\admin\\userdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\services\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\services\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\dtos\\registration\\paymentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\dtos\\registration\\paymentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\marathonmanager.web.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\marathonmanager.web.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\controllers\\registrationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\controllers\\registrationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\dtos\\registration\\runnerregistrationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\dtos\\registration\\runnerregistrationrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\races\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\races\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\models\\race.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\models\\race.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\services\\smtpemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\services\\smtpemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\controllers\\blogpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\blogpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\controllers\\publicracescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\publicracescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\models\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\models\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:2:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:1:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\controllers\\adminapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:1:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\adminapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\runner\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\runner\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\runner\\resultdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\runner\\resultdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\editdistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\editdistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\adddistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\adddistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\admin\\racedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\admin\\racedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\marathonmanager.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\marathonmanager.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:1:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\controllers\\adminapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\adminapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\runner\\registrationdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\runner\\registrationdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\runner\\racedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:1:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\runner\\racedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\editdistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\editdistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\adddistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\adddistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\_distanceformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\_distanceformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\admin\\racedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\admin\\racedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\marathonmanager.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\marathonmanager.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|d:\\prn232_project\\prn232\\marathonmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:2:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\runner\\resultdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\runner\\resultdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\runner\\registrationdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\runner\\registrationdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\runner\\racedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\runner\\racedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\managedistances.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\managedistances.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:3:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\editdistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:3:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\editdistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:3:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\adddistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:3:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\adddistance.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:3:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\_distanceformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:3:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\_distanceformfields.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\runner\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:2:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\runner\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:3:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|d:\\prn232_project\\prn232\\marathonmanager.web\\views\\organizer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:3:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\organizer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -322,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 596,
-          "SelectedChildIndex": 207,
+          "SelectedChildIndex": 202,
           "Children": [
             {
               "$type": "Bookmark",
@@ -906,10 +630,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:16:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
@@ -1138,949 +858,120 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\_ViewStart.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T16:15:26.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\Index.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\Index.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\Index.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\Index.cshtml",
-              "ViewState": "AgIAADEAAAAAAAAAAAAiwEgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:21:05.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ManageDistances.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\ManageDistances.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\ManageDistances.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\ManageDistances.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\ManageDistances.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-13T01:59:02.834Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\appsettings.json",
+              "RelativeDocumentMoniker": "MarathonManager.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\appsettings.json",
+              "RelativeToolTip": "MarathonManager.API\\appsettings.json",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvxsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-16T16:24:54.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "OrganizerController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Controllers\\OrganizerController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Controllers\\OrganizerController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Controllers\\OrganizerController.cs",
-              "RelativeToolTip": "MarathonManager.Web\\Controllers\\OrganizerController.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAuwHwAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:18:38.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrganizerRacesController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\OrganizerRacesController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\OrganizerRacesController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\OrganizerRacesController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\OrganizerRacesController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAADwv0MAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T16:00:30.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_DistanceFormFields.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Account\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "MarathonManager.Web\\Views\\Account\\ResetPassword.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:20:29.849Z",
+              "WhenOpened": "2025-11-16T16:23:03.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RacesController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\RacesController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\RacesController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\RacesController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\RacesController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T16:21:50.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\appsettings.json",
-              "RelativeDocumentMoniker": "MarathonManager.API\\appsettings.json",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\appsettings.json",
-              "RelativeToolTip": "MarathonManager.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-12T12:19:59.674Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\appsettings.json",
-              "RelativeDocumentMoniker": "MarathonManager.API\\appsettings.json",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\appsettings.json",
-              "RelativeToolTip": "MarathonManager.API\\appsettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-13T14:54:00.479Z",
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "MarathonManager.Web\\Views\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-16T16:23:01.847Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RacesController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Controllers\\RacesController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Controllers\\RacesController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Controllers\\RacesController.cs",
-              "RelativeToolTip": "MarathonManager.Web\\Controllers\\RacesController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAIwEQAAAA4AAAAAAAAAA==",
+              "Title": "20251116161813_AddResetPasswordColumnsToUser.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Migrations\\20251116161813_AddResetPasswordColumnsToUser.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Migrations\\20251116161813_AddResetPasswordColumnsToUser.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Migrations\\20251116161813_AddResetPasswordColumnsToUser.cs",
+              "RelativeToolTip": "MarathonManager.API\\Migrations\\20251116161813_AddResetPasswordColumnsToUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:29:05.587Z",
+              "WhenOpened": "2025-11-16T16:18:13.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:39:44.677Z",
+              "Title": "MarathonManager.API",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\MarathonManager.API.csproj",
+              "RelativeDocumentMoniker": "MarathonManager.API\\MarathonManager.API.csproj",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\MarathonManager.API.csproj",
+              "RelativeToolTip": "MarathonManager.API\\MarathonManager.API.csproj",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-16T16:03:45.921Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Program.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Program.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Program.cs",
-              "RelativeToolTip": "MarathonManager.API\\Program.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T14:53:38.258Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Program.cs",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Program.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Program.cs",
-              "RelativeToolTip": "MarathonManager.Web\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T14:54:17.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "AdminApiController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAiwDMBAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T14:54:15.454Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T14:54:07.36Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Shared\\Error.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Shared\\Error.cshtml",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAAAGAAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T16:15:59.697Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Controllers\\AdminController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "MarathonManager.Web\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T04:36:16.458Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAowLoAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T10:49:28.886Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\Index.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Runner\\Index.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\Index.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Runner\\Index.cshtml",
-              "ViewState": "AgIAABMAAAAAAAAAAAAuwEQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-13T01:47:00.156Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T12:19:59.674Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AdminDashboardViewModel.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\ViewModels\\AdminDashboardViewModel.cs",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\ViewModels\\AdminDashboardViewModel.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\ViewModels\\AdminDashboardViewModel.cs",
-              "RelativeToolTip": "MarathonManager.Web\\ViewModels\\AdminDashboardViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:07:48.381Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "ResultDetails.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\ResultDetails.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Runner\\ResultDetails.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\ResultDetails.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Runner\\ResultDetails.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-13T01:38:51.221Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "EditDistance.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:21:01.199Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAiwEoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:20:56.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "AddDistance.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:20:51.52Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAAAMwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:18:45.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "RaceDetails.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Admin\\RaceDetails.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Admin\\RaceDetails.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Admin\\RaceDetails.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Admin\\RaceDetails.cshtml",
-              "ViewState": "AgIAADcAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T10:55:45.159Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T10:55:39.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Account\\Register.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T10:50:55.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T10:50:27.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "MarathonManager.Web.csproj",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\MarathonManager.Web.csproj",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\MarathonManager.Web.csproj",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\MarathonManager.Web.csproj",
-              "RelativeToolTip": "MarathonManager.Web\\MarathonManager.Web.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-12T10:49:38.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:49:28.886Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdminRacesController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\AdminRacesController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\AdminRacesController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\AdminRacesController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\AdminRacesController.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAADwv5AAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:49:26.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "AdminApiController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "ViewState": "AgIAAAUBAAAAAAAAAADwvw8BAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:49:23.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Program.cs",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Program.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Program.cs",
-              "RelativeToolTip": "MarathonManager.Web\\Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:48:24.808Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\appsettings.json",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\appsettings.json",
-              "RelativeToolTip": "MarathonManager.Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-12T10:48:21.549Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "RegistrationDetails.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-13T02:23:22.271Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "RaceDetails.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowB0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-13T01:59:03.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "EditDistance.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "ViewState": "AgIAADUAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-13T01:41:11.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "AddDistance.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "ViewState": "AgIAAMIAAAAAAAAAAAAAALwAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T15:58:08.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "_DistanceFormFields.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-13T01:32:05.469Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "RaceDetails.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Admin\\RaceDetails.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Admin\\RaceDetails.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Admin\\RaceDetails.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Admin\\RaceDetails.cshtml",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAowMYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:25:53.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAHEBAAAAAAAAAAAowIsBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:25:47.423Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Account\\Register.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-13T01:11:16.706Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAowEgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:21:05.569Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "MarathonManager.Web.csproj",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\MarathonManager.Web.csproj",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\MarathonManager.Web.csproj",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\MarathonManager.Web.csproj",
-              "RelativeToolTip": "MarathonManager.Web\\MarathonManager.Web.csproj",
-              "ViewState": "AgIAADcAAAAAAAAAAAAowFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-12T11:21:10.079Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserDetails.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Admin\\UserDetails.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Admin\\UserDetails.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Admin\\UserDetails.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Admin\\UserDetails.cshtml",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAowHAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:25:58.053Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAADsAAAAAAAAAAAAowFUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:26:02.396Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAowCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T11:21:01.199Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "MarathonManager.API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowEoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-12T11:20:56.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "VnPayLibrary.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Services\\VnPayLibrary.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Services\\VnPayLibrary.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Services\\VnPayLibrary.cs",
-              "RelativeToolTip": "MarathonManager.API\\Services\\VnPayLibrary.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAowCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T11:20:51.52Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "PaymentRequestDto.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\DTOs\\Registration\\PaymentRequestDto.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\DTOs\\Registration\\PaymentRequestDto.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\DTOs\\Registration\\PaymentRequestDto.cs",
-              "RelativeToolTip": "MarathonManager.API\\DTOs\\Registration\\PaymentRequestDto.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T11:20:29.849Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\WeatherForecast.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\WeatherForecast.cs",
-              "RelativeToolTip": "MarathonManager.API\\WeatherForecast.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAuwBkAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:18:33.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MarathonManager.Web",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\MarathonManager.Web.csproj",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\MarathonManager.Web.csproj",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\MarathonManager.Web.csproj",
-              "RelativeToolTip": "MarathonManager.Web\\MarathonManager.Web.csproj",
-              "ViewState": "AgIAABYAAAAAAAAAAAAkwC8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-12T14:54:33.128Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Properties\\launchSettings.json",
-              "RelativeToolTip": "MarathonManager.Web\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAmwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-12T16:18:36.528Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Program.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Program.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Program.cs",
-              "RelativeToolTip": "MarathonManager.API\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAiwCAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:18:39.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\appsettings.json",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\appsettings.json",
-              "RelativeToolTip": "MarathonManager.Web\\appsettings.json",
-              "ViewState": "AgIAADQAAAAAAAAAAAAowE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-12T14:53:55.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "RunnerRegistrationRequestDto.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\DTOs\\Registration\\RunnerRegistrationRequestDto.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\DTOs\\Registration\\RunnerRegistrationRequestDto.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\DTOs\\Registration\\RunnerRegistrationRequestDto.cs",
-              "RelativeToolTip": "MarathonManager.API\\DTOs\\Registration\\RunnerRegistrationRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:18:35.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "RegistrationsController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Controllers\\RegistrationsController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Controllers\\RegistrationsController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Controllers\\RegistrationsController.cs",
-              "RelativeToolTip": "MarathonManager.Web\\Controllers\\RegistrationsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:18:42.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\_ViewStart.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T16:18:43.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "ResultDetails.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\ResultDetails.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Runner\\ResultDetails.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\ResultDetails.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Runner\\ResultDetails.cshtml",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAIwJAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T10:49:26.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "RegistrationDetails.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
-              "ViewState": "AgIAACIBAAAAAAAAAAAIwA8BAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T10:49:23.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "RaceDetails.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAIwGQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T12:29:05.587Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\Index.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\Index.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\Index.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T12:07:37.011Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "ManageDistances.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\ManageDistances.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\ManageDistances.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\ManageDistances.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\ManageDistances.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T12:07:35.453Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "EditDistance.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\EditDistance.cshtml",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAowKkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:39:47.95Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Races\\Detail.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Races\\Detail.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Races\\Detail.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Races\\Detail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:39:43.557Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "AddDistance.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\AddDistance.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:31:19.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "_DistanceFormFields.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\_DistanceFormFields.cshtml",
-              "ViewState": "AgIAAJ8AAAAAAAAAAIBJwMwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T11:18:45.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Race.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Models\\Race.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Models\\Race.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Models\\Race.cs",
-              "RelativeToolTip": "MarathonManager.API\\Models\\Race.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAIBJwGEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:55:45.159Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Registration.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Models\\Registration.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Models\\Registration.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Models\\Registration.cs",
-              "RelativeToolTip": "MarathonManager.API\\Models\\Registration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:55:39.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "BlogPostsController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\BlogPostsController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\BlogPostsController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\BlogPostsController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\BlogPostsController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAIBJwE4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:50:55.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "PublicRacesController.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\PublicRacesController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\PublicRacesController.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Controllers\\PublicRacesController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\PublicRacesController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAIBJwEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:50:27.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Models\\Comment.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Models\\Comment.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Models\\Comment.cs",
-              "RelativeToolTip": "MarathonManager.API\\Models\\Comment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:49:38.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\Index.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Runner\\Index.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Runner\\Index.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Runner\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T10:48:24.808Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 6,
               "Title": "User.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Models\\User.cs",
               "RelativeDocumentMoniker": "MarathonManager.API\\Models\\User.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Models\\User.cs",
               "RelativeToolTip": "MarathonManager.API\\Models\\User.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAIBJwG8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAywBcAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:47:53.481Z"
+              "WhenOpened": "2025-11-16T15:47:20.912Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Like.cs",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Models\\Like.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Models\\Like.cs",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.API\\Models\\Like.cs",
-              "RelativeToolTip": "MarathonManager.API\\Models\\Like.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "SmtpEmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Services\\SmtpEmailSender.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Services\\SmtpEmailSender.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Services\\SmtpEmailSender.cs",
+              "RelativeToolTip": "MarathonManager.API\\Services\\SmtpEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T10:43:55.377Z"
+              "WhenOpened": "2025-11-16T15:41:03.07Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "ToolTip": "D:\\prn232_project\\PRN232\\MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Organizer\\Create.cshtml",
-              "ViewState": "AgIAAGEBAAAAAAAAAIA/wD0BAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T10:36:42.148Z"
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "MarathonManager.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAIwBwBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T15:40:23.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Program.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Program.cs",
+              "RelativeToolTip": "MarathonManager.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T15:11:25.882Z",
+              "EditorCaption": ""
             }
           ]
         },

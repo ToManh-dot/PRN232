@@ -1,4 +1,5 @@
-﻿using MarathonManager.API.Models;
+﻿
+using MarathonManager.API.Models;
 using MarathonManager.API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -68,6 +69,7 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+builder.Services.AddScoped<IEmailSender, SmtpEmailSender>();
 
 var connectionString = builder.Configuration.GetConnectionString("MyCnn");
 

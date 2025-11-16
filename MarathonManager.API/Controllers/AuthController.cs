@@ -1,7 +1,9 @@
-﻿using MarathonManager.API.Models;
-using MarathonManager.API.DTOs.Auth; // Giả sử bạn tạo DTOs trong thư mục này
+﻿using MarathonManager.API.DTOs.Auth; // Giả sử bạn tạo DTOs trong thư mục này
+using MarathonManager.API.Models;
 using Microsoft.AspNetCore.Identity;
+using MarathonManager.API.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -16,16 +18,18 @@ namespace MarathonManager.API.Controllers
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<IdentityRole<int>> _roleManager;
         private readonly IConfiguration _configuration;
+        private readonly IEmailSender _emailSender;
 
         // Tiêm (Inject) các dịch vụ cần thiết
         public AuthController(
             UserManager<User> userManager,
             RoleManager<IdentityRole<int>> roleManager,
-            IConfiguration configuration)
+            IConfiguration configuration, IEmailSender emailSender)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
+            _emailSender = emailSender;
         }
 
         // ==========================================================
@@ -105,6 +109,92 @@ namespace MarathonManager.API.Controllers
 
             return Ok(new { message = "Đăng ký tài khoản thành công." });
         }
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var user = await _userManager.FindByEmailAsync(dto.Email);
+
+            // Không tiết lộ user có tồn tại hay không (security best practice)
+            if (user == null)
+            {
+                return Ok(new { message = "Nếu email tồn tại, hệ thống đã gửi hướng dẫn đặt lại mật khẩu." });
+            }
+
+            // Tạo token reset mật khẩu của Identity
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            // Token có thể chứa ký tự đặc biệt, nên encode lại để đưa vào URL
+            var tokenBytes = Encoding.UTF8.GetBytes(token);
+            var encodedToken = WebEncoders.Base64UrlEncode(tokenBytes);
+
+            var frontendBaseUrl = _configuration["FrontendBaseUrl"];
+            // Ví dụ trong appsettings: "FrontendBaseUrl": "https://localhost:7280"
+
+            var resetUrl =
+                $"{frontendBaseUrl}/Account/ResetPassword?email={Uri.EscapeDataString(user.Email!)}&token={Uri.EscapeDataString(encodedToken)}";
+
+            var subject = "Đặt lại mật khẩu Marathon Manager";
+            var body = $@"
+Xin chào {user.FullName},
+
+Bạn đã yêu cầu đặt lại mật khẩu cho tài khoản Marathon Manager.
+Vui lòng click vào link sau để đặt lại mật khẩu (link chỉ sử dụng được 1 lần):
+
+{resetUrl}
+
+Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua email này.
+";
+
+            await _emailSender.SendEmailAsync(user.Email!, subject, body);
+
+            return Ok(new { message = "Nếu email tồn tại, hệ thống đã gửi hướng dẫn đặt lại mật khẩu." });
+        }
+
+        // ==========================================================
+        // POST: api/auth/reset-password
+        // Thực hiện đổi mật khẩu bằng token
+        // ==========================================================
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var user = await _userManager.FindByEmailAsync(dto.Email);
+            if (user == null)
+            {
+                // Không tiết lộ quá nhiều
+                return BadRequest(new { message = "Yêu cầu đặt lại mật khẩu không hợp lệ." });
+            }
+
+            // Decode token từ URL
+            string decodedToken;
+            try
+            {
+                var tokenBytes = WebEncoders.Base64UrlDecode(dto.Token);
+                decodedToken = Encoding.UTF8.GetString(tokenBytes);
+            }
+            catch
+            {
+                return BadRequest(new { message = "Token không hợp lệ." });
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, decodedToken, dto.NewPassword);
+            if (!result.Succeeded)
+            {
+                return BadRequest(new
+                {
+                    message = "Không thể đặt lại mật khẩu.",
+                    errors = result.Errors.Select(e => e.Description)
+                });
+            }
+
+            return Ok(new { message = "Đặt lại mật khẩu thành công." });
+        }
+
 
         // ==========================================================
         // HÀM PHỤ TRỢ TẠO TOKEN (Yêu cầu 1.10)

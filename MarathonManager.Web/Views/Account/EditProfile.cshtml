@@ -1,0 +1,40 @@
+﻿@model MarathonManager.Web.ViewModels.EditProfileViewModel
+
+<div class="container" style="padding-top:80px; padding-bottom:80px;">
+    <h2 class="mb-4"><i class="fas fa-user-edit me-2"></i>Chỉnh sửa thông tin</h2>
+
+    <form asp-action="EditProfile" method="post">
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <div class="mb-3">
+            <label asp-for="FullName" class="form-label"></label>
+            <input asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="PhoneNumber" class="form-label"></label>
+            <input asp-for="PhoneNumber" class="form-control" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DateOfBirth" class="form-label"></label>
+            <input asp-for="DateOfBirth" type="date" class="form-control" />
+            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Gender" class="form-label"></label>
+            <select asp-for="Gender" class="form-select">
+                <option value="">Chọn giới tính</option>
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+            </select>
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success"><i class="fas fa-save me-2"></i>Lưu thay đổi</button>
+        <a asp-action="Profile" class="btn btn-secondary ms-2">Hủy</a>
+    </form>
+</div>

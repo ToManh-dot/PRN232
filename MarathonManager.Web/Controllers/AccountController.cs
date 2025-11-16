@@ -9,6 +9,9 @@ using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.Net.Http.Json;
 
+using MarathonManager.API.DTOs.Account;
+using System.Net.Http;
+using System.Text.Json;
 namespace MarathonManager.Web.Controllers
 {
     public class AccountController : Controller
@@ -331,6 +334,133 @@ namespace MarathonManager.Web.Controllers
             var profile = JsonConvert.DeserializeObject<UserProfileViewModel>(json);
 
             return View(profile);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EditProfile()
+        {
+            var token = _httpContextAccessor.HttpContext.Request.Cookies["AuthToken"];
+            if (string.IsNullOrEmpty(token))
+            {
+                TempData["ErrorMessage"] = "Bạn cần đăng nhập để chỉnh sửa thông tin cá nhân.";
+                return RedirectToAction("Login");
+            }
+
+            var client = _httpClientFactory.CreateClient("MarathonApi");
+            client.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+            var response = await client.GetAsync("/api/accounts/profile");
+            if (!response.IsSuccessStatusCode)
+            {
+                TempData["ErrorMessage"] = "Không thể tải thông tin người dùng.";
+                return RedirectToAction("Profile");
+            }
+
+            var json = await response.Content.ReadAsStringAsync();
+            var profile = JsonConvert.DeserializeObject<UserProfileViewModel>(json);
+
+            var model = new EditProfileViewModel
+            {
+                FullName = profile.FullName,
+                PhoneNumber = profile.PhoneNumber,
+                DateOfBirth = profile.DateOfBirth,
+                Gender = profile.Gender
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditProfile(EditProfileViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var token = _httpContextAccessor.HttpContext.Request.Cookies["AuthToken"];
+            if (string.IsNullOrEmpty(token))
+            {
+                TempData["ErrorMessage"] = "Bạn cần đăng nhập.";
+                return RedirectToAction("Login");
+            }
+
+            var client = _httpClientFactory.CreateClient("MarathonApi");
+            client.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+            // Gửi thông tin update lên API
+            var jsonContent = new StringContent(
+                JsonConvert.SerializeObject(model),
+                Encoding.UTF8, "application/json");
+
+            var response = await client.PutAsync("/api/accounts/profile", jsonContent); // PUT hoặc PATCH tùy API
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["SuccessMessage"] = "Cập nhật thông tin thành công!";
+                return RedirectToAction("Profile");
+            }
+
+            var error = await response.Content.ReadAsStringAsync();
+            ModelState.AddModelError("", error);
+            return View(model);
+        }
+
+
+        [HttpGet]
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            if (model.NewPassword != model.ConfirmPassword)
+            {
+                ModelState.AddModelError("", "Mật khẩu mới và nhập lại không khớp");
+                return View(model);
+            }
+
+            var token = Request.Cookies["AuthToken"];
+            if (string.IsNullOrEmpty(token))
+            {
+                TempData["Error"] = "Bạn cần đăng nhập.";
+                return RedirectToAction("Login");
+            }
+
+            var client = _httpClientFactory.CreateClient("MarathonApi");
+            client.DefaultRequestHeaders.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+
+            // Map ViewModel -> API DTO
+            var apiDto = new ChangePasswordDto
+            {
+                CurrentPassword = model.CurrentPassword,
+                NewPassword = model.NewPassword,
+                ConfirmPassword = model.ConfirmPassword
+            };
+
+            var response = await client.PostAsync(
+                "/api/accounts/change-password",
+                new StringContent(JsonConvert.SerializeObject(apiDto),
+                Encoding.UTF8, "application/json"));
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["Success"] = "Đổi mật khẩu thành công!";
+                return View(model);
+            }
+
+            var error = await response.Content.ReadAsStringAsync();
+            ModelState.AddModelError("", error);
+
+            return View(model);
         }
     }
 }

@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "MarathonManager.API.Controllers.AccountsController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/Accounts/change-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "MarathonManager.API.DTOs.Account.ChangePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarathonManager.API.Controllers.AccountsController",
     "Method": "GetProfile",
     "RelativePath": "api/Accounts/profile",
     "HttpMethod": "GET",
@@ -18,6 +34,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "MarathonManager.API.Controllers.AccountsController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Accounts/profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "MarathonManager.API.DTOs.Account.EditProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "MarathonManager.API.Controllers.AdminApiController",

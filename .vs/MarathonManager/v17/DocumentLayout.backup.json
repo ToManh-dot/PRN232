@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 596,
-          "SelectedChildIndex": 202,
+          "SelectedChildIndex": 201,
           "Children": [
             {
               "$type": "Bookmark",
@@ -431,10 +431,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1196186238:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:18:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
               "$type": "Bookmark",
@@ -864,7 +860,7 @@
               "RelativeDocumentMoniker": "MarathonManager.API\\appsettings.json",
               "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\appsettings.json",
               "RelativeToolTip": "MarathonManager.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwCUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvxsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-11-16T16:24:54.637Z",
               "EditorCaption": ""
@@ -879,8 +875,7 @@
               "RelativeToolTip": "MarathonManager.Web\\Views\\Account\\ResetPassword.cshtml",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-16T16:23:03.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T16:23:03.256Z"
             },
             {
               "$type": "Document",
@@ -892,8 +887,7 @@
               "RelativeToolTip": "MarathonManager.Web\\Views\\Account\\ForgotPassword.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-16T16:23:01.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T16:23:01.847Z"
             },
             {
               "$type": "Document",
@@ -905,21 +899,19 @@
               "RelativeToolTip": "MarathonManager.API\\Migrations\\20251116161813_AddResetPasswordColumnsToUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T16:18:13.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T16:18:13.945Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MarathonManager.API",
+              "Title": "MarathonManager.API.csproj",
               "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\MarathonManager.API.csproj",
               "RelativeDocumentMoniker": "MarathonManager.API\\MarathonManager.API.csproj",
               "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\MarathonManager.API.csproj",
               "RelativeToolTip": "MarathonManager.API\\MarathonManager.API.csproj",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-16T16:03:45.921Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T16:03:45.921Z"
             },
             {
               "$type": "Document",
@@ -931,8 +923,7 @@
               "RelativeToolTip": "MarathonManager.API\\Models\\User.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAywBcAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T15:47:20.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T15:47:20.912Z"
             },
             {
               "$type": "Document",
@@ -944,8 +935,7 @@
               "RelativeToolTip": "MarathonManager.API\\Services\\SmtpEmailSender.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAkwCoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T15:41:03.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T15:41:03.07Z"
             },
             {
               "$type": "Document",
@@ -955,10 +945,9 @@
               "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\AuthController.cs",
               "RelativeToolTip": "MarathonManager.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAgwIUAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAIwBwBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T15:40:23.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T15:40:23.903Z"
             },
             {
               "$type": "Document",
@@ -970,8 +959,7 @@
               "RelativeToolTip": "MarathonManager.API\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T15:11:25.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-16T15:11:25.882Z"
             }
           ]
         },

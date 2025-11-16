@@ -46,6 +46,11 @@ namespace MarathonManager.API.Controllers
             {
                 return Unauthorized(new { message = "Email hoặc mật khẩu không đúng." });
             }
+            var passwordValid = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+            if (!passwordValid)
+            {
+                return Unauthorized(new { message = "Email hoặc mật khẩu không đúng." });
+            }
 
             // 3. Kiểm tra tài khoản có bị khóa không (logic nghiệp vụ của bạn)
             if (!user.IsActive)

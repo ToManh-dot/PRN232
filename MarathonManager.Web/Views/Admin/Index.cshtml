@@ -97,17 +97,14 @@
                                     }
                                     else if (race.Status == "Pending")
                                     {
-
                                         <span class="badge bg-warning text-dark">Chờ duyệt</span>
                                     }
                                     else if (race.Status == "Cancelled")
                                     {
-
                                         <span class="badge bg-danger">Đã hủy</span>
                                     }
                                     else
                                     {
-
                                         <span class="badge bg-secondary">@race.Status</span>
                                     }
                                 </td>
@@ -117,12 +114,12 @@
                                     </a>
                                     @if (race.Status == "Pending")
                                     {
-                                        <form asp-controller="Admin" asp-action="ApproveRace" method="post" class="d-inline">
+                                        <form asp-controller="Admin" asp-action="Approve" method="post" class="d-inline">
                                             @Html.AntiForgeryToken()
                                             <input type="hidden" name="raceId" value="@race.Id" />
                                             <button type="submit" class="btn btn-success btn-sm"><i class="fas fa-check"></i></button>
                                         </form>
-                                        <form asp-controller="Admin" asp-action="CancelRace" method="post" class="d-inline">
+                                        <form asp-controller="Admin" asp-action="Cancel" method="post" class="d-inline">
                                             @Html.AntiForgeryToken()
                                             <input type="hidden" name="raceId" value="@race.Id" />
                                             <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></button>
@@ -176,7 +173,6 @@
                                     }
                                     else
                                     {
-
                                         <span class="text-muted">N/A</span>
                                     }
                                 </td>
@@ -187,7 +183,6 @@
                                     }
                                     else
                                     {
-
                                         <span class="badge bg-danger">Locked</span>
                                     }
                                 </td>
@@ -248,12 +243,11 @@
                                 <td>
                                     @if (blog.Status == "Published")
                                     {
-                                        <span class="badge bg-primary">Published</span>
+                                        <span class="badge bg-success">Đã duyệt</span>
                                     }
                                     else
                                     {
-
-                                        <span class="badge bg-secondary">Draft</span>
+                                        <span class="badge bg-secondary">Chờ duyệt</span>
                                     }
                                 </td>
                                 <td class="text-end">
@@ -266,7 +260,6 @@
                                         }
                                         else
                                         {
-
                                             <button class="btn btn-success btn-sm"><i class="fas fa-check"></i></button>
                                         }
                                     </form>

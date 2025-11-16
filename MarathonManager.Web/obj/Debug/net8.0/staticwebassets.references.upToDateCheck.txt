@@ -3,3 +3,13 @@ C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticweba
 C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\DELL\PRN232\PRN232-main\MarathonManager.API\obj\Debug\net8.0\staticwebassets.build.json

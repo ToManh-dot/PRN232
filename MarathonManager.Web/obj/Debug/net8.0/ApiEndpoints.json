@@ -1,5 +1,25 @@
 [
   {
+    "ContainingType": "MarathonManager.API.Controllers.AccountsController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Accounts/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "MarathonManager.API.DTOs.Account.UserProfileDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "MarathonManager.API.Controllers.AdminApiController",
     "Method": "GetAllRacesForAdmin",
     "RelativePath": "api/admin/all-races",
@@ -316,6 +336,22 @@
   },
   {
     "ContainingType": "MarathonManager.API.Controllers.AuthController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Auth/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MarathonManager.API.DTOs.Auth.ForgotPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarathonManager.API.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
     "HttpMethod": "POST",
@@ -341,6 +377,22 @@
       {
         "Name": "registerDto",
         "Type": "MarathonManager.API.DTOs.Auth.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarathonManager.API.Controllers.AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MarathonManager.API.DTOs.Auth.ResetPasswordDto",
         "IsRequired": true
       }
     ],
@@ -696,6 +748,22 @@
     ]
   },
   {
+    "ContainingType": "MarathonManager.API.Controllers.RaceDistancesController",
+    "Method": "GetRaceDistance",
+    "RelativePath": "api/RaceDistances/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MarathonManager.API.Controllers.RacesController",
     "Method": "GetRaces",
     "RelativePath": "api/Races",
@@ -742,6 +810,53 @@
     ]
   },
   {
+    "ContainingType": "MarathonManager.API.Controllers.RacesController",
+    "Method": "UpdateRace",
+    "RelativePath": "api/Races/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MarathonManager.API.DTOs.Race.RaceUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MarathonManager.API.Controllers.RacesController",
+    "Method": "GetRaceForEdit",
+    "RelativePath": "api/Races/manage/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MarathonManager.API.DTOs.Race.RaceUpdateDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RegistrationsController",
     "Method": "RegisterForRace",
     "RelativePath": "api/Registrations",
@@ -767,6 +882,22 @@
     "Parameters": [
       {
         "Name": "raceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RegistrationsController",
+    "Method": "PayRegistration",
+    "RelativePath": "api/Registrations/{registrationId}/pay",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registrationId",
         "Type": "System.Int32",
         "IsRequired": true
       }

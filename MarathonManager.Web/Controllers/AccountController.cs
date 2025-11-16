@@ -7,6 +7,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using System.Net.Http.Json;
+
 namespace MarathonManager.Web.Controllers
 {
     public class AccountController : Controller
@@ -78,6 +80,81 @@ namespace MarathonManager.Web.Controllers
                 return View(model);
             }
         }
+        // GET: /Account/ForgotPassword
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View(new ForgotPasswordViewModel());
+        }
+
+        // POST: /Account/ForgotPassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            var client = _httpClientFactory.CreateClient("MarathonApi");
+
+            // Gửi request lên API để nó gửi email
+            var response = await client.PostAsJsonAsync("api/auth/forgot-password", new
+            {
+                email = model.Email
+            });
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["SuccessMessage"] = "Nếu email tồn tại, chúng tôi đã gửi hướng dẫn đặt lại mật khẩu.";
+                return RedirectToAction("Login");
+            }
+
+            TempData["ErrorMessage"] = "Không thể gửi yêu cầu đặt lại mật khẩu. Vui lòng thử lại sau.";
+            return View(model);
+        }
+
+        // GET: /Account/ResetPassword?email=...&token=...
+        [HttpGet]
+        public IActionResult ResetPassword(string email, string token)
+        {
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(token))
+            {
+                TempData["ErrorMessage"] = "Link đặt lại mật khẩu không hợp lệ.";
+                return RedirectToAction("Login");
+            }
+
+            var vm = new ResetPasswordViewModel
+            {
+                Email = email,
+                Token = token
+            };
+            return View(vm);
+        }
+
+        // POST: /Account/ResetPassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            var client = _httpClientFactory.CreateClient("MarathonApi");
+
+            var response = await client.PostAsJsonAsync("api/auth/reset-password", new
+            {
+                email = model.Email,
+                token = model.Token,
+                newPassword = model.NewPassword
+            });
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["SuccessMessage"] = "Đổi mật khẩu thành công. Vui lòng đăng nhập lại.";
+                return RedirectToAction("Login");
+            }
+
+            TempData["ErrorMessage"] = "Không thể đặt lại mật khẩu. Link có thể đã hết hạn hoặc không hợp lệ.";
+            return View(model);
+        }
 
         // ===================================
         // GET: /Account/Register
@@ -114,14 +191,43 @@ namespace MarathonManager.Web.Controllers
 
             if (apiResponse.IsSuccessStatusCode)
             {
-                // Đăng ký thành công, chuyển đến trang Đăng nhập
                 return RedirectToAction("Login", new { registrationSuccess = true });
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "Đăng ký thất bại. Email có thể đã tồn tại.");
+                var responseBody = await apiResponse.Content.ReadAsStringAsync();
+
+                // Thử parse JSON trả về từ API
+                try
+                {
+                    // API trả kiểu:
+                    // { message = "...", errors = ["...", "..."] }
+                    dynamic errorObj = JsonConvert.DeserializeObject<dynamic>(responseBody);
+
+                    // Lấy message chung
+                    if (errorObj?.message != null)
+                    {
+                        ModelState.AddModelError(string.Empty, (string)errorObj.message);
+                    }
+
+                    // Lấy danh sách lỗi chi tiết (nếu có)
+                    if (errorObj?.errors != null)
+                    {
+                        foreach (var err in errorObj.errors)
+                        {
+                            ModelState.AddModelError(string.Empty, (string)err);
+                        }
+                    }
+                }
+                catch
+                {
+                    // Nếu parse lỗi thì fallback về message cũ
+                    ModelState.AddModelError(string.Empty, "Đăng ký thất bại. Vui lòng thử lại.");
+                }
+
                 return View(model);
             }
+
         }
 
         // ===================================

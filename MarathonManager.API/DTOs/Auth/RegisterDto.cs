@@ -10,6 +10,5 @@ namespace MarathonManager.API.DTOs.Auth
         [Required]
         public string Password { get; set; }
 
-        // Bạn có thể thêm các trường khác như DateOfBirth, Gender...
     }
 }

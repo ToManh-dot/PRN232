@@ -1,4 +1,4 @@
-﻿using MarathonManager.API.DTOs.Auth; // Giả sử bạn tạo DTOs trong thư mục này
+﻿using MarathonManager.API.DTOs.Auth; 
 using MarathonManager.API.Models;
 using Microsoft.AspNetCore.Identity;
 using MarathonManager.API.Services;
@@ -20,7 +20,6 @@ namespace MarathonManager.API.Controllers
         private readonly IConfiguration _configuration;
         private readonly IEmailSender _emailSender;
 
-        // Tiêm (Inject) các dịch vụ cần thiết
         public AuthController(
             UserManager<User> userManager,
             RoleManager<IdentityRole<int>> roleManager,
@@ -32,16 +31,12 @@ namespace MarathonManager.API.Controllers
             _emailSender = emailSender;
         }
 
-        // ==========================================================
-        // POST: api/auth/login
-        // ==========================================================
+      
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
-            // 1. Kiểm tra xem người dùng có tồn tại không
             var user = await _userManager.FindByEmailAsync(loginDto.Email);
 
-            // 2. Kiểm tra người dùng và mật khẩu
             if (user == null)
             {
                 return Unauthorized(new { message = "Email hoặc mật khẩu không đúng." });
@@ -52,19 +47,15 @@ namespace MarathonManager.API.Controllers
                 return Unauthorized(new { message = "Email hoặc mật khẩu không đúng." });
             }
 
-            // 3. Kiểm tra tài khoản có bị khóa không (logic nghiệp vụ của bạn)
             if (!user.IsActive)
             {
                 return Unauthorized(new { message = "Tài khoản của bạn đã bị khóa. Vui lòng liên hệ Admin." });
             }
 
-            // 4. Lấy các vai trò (roles) của người dùng
             var userRoles = await _userManager.GetRolesAsync(user);
 
-            // 5. Tạo Token
             var tokenString = GenerateJwtToken(user, userRoles);
 
-            // 6. Trả về Token cho client
             return Ok(new
             {
                 token = tokenString,
@@ -77,39 +68,31 @@ namespace MarathonManager.API.Controllers
             });
         }
 
-        // ==========================================================
-        // POST: api/auth/register
-        // ==========================================================
+  
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
         {
-            // 1. Kiểm tra xem email đã được đăng ký chưa
             var userExists = await _userManager.FindByEmailAsync(registerDto.Email);
             if (userExists != null)
             {
                 return BadRequest(new { message = "Email đã tồn tại." });
             }
 
-            // 2. Map DTO sang Model User
             User newUser = new User()
             {
                 Email = registerDto.Email,
-                UserName = registerDto.Email, // Identity yêu cầu UserName
+                UserName = registerDto.Email, 
                 FullName = registerDto.FullName,
-                IsActive = true, // Mặc định là active
+                IsActive = true, 
                 CreatedAt = DateTime.UtcNow
             };
 
-            // 3. Tạo người dùng mới (với mật khẩu đã hash)
             var result = await _userManager.CreateAsync(newUser, registerDto.Password);
             if (!result.Succeeded)
             {
-                // Trả về lỗi nếu có
                 return BadRequest(new { message = "Tạo tài khoản thất bại.", errors = result.Errors.Select(e => e.Description) });
             }
 
-            // 4. Gán vai trò "Runner" mặc định cho người dùng mới
-            // (Chạy hàm SeedRoles trước để đảm bảo Role "Runner" tồn tại)
             await _userManager.AddToRoleAsync(newUser, "Runner");
 
             return Ok(new { message = "Đăng ký tài khoản thành công." });
@@ -122,21 +105,17 @@ namespace MarathonManager.API.Controllers
 
             var user = await _userManager.FindByEmailAsync(dto.Email);
 
-            // Không tiết lộ user có tồn tại hay không (security best practice)
             if (user == null)
             {
                 return Ok(new { message = "Nếu email tồn tại, hệ thống đã gửi hướng dẫn đặt lại mật khẩu." });
             }
 
-            // Tạo token reset mật khẩu của Identity
             var token = await _userManager.GeneratePasswordResetTokenAsync(user);
 
-            // Token có thể chứa ký tự đặc biệt, nên encode lại để đưa vào URL
             var tokenBytes = Encoding.UTF8.GetBytes(token);
             var encodedToken = WebEncoders.Base64UrlEncode(tokenBytes);
 
             var frontendBaseUrl = _configuration["FrontendBaseUrl"];
-            // Ví dụ trong appsettings: "FrontendBaseUrl": "https://localhost:7280"
 
             var resetUrl =
                 $"{frontendBaseUrl}/Account/ResetPassword?email={Uri.EscapeDataString(user.Email!)}&token={Uri.EscapeDataString(encodedToken)}";
@@ -158,10 +137,7 @@ Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua emai
             return Ok(new { message = "Nếu email tồn tại, hệ thống đã gửi hướng dẫn đặt lại mật khẩu." });
         }
 
-        // ==========================================================
-        // POST: api/auth/reset-password
-        // Thực hiện đổi mật khẩu bằng token
-        // ==========================================================
+        
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto dto)
         {
@@ -171,11 +147,9 @@ Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua emai
             var user = await _userManager.FindByEmailAsync(dto.Email);
             if (user == null)
             {
-                // Không tiết lộ quá nhiều
                 return BadRequest(new { message = "Yêu cầu đặt lại mật khẩu không hợp lệ." });
             }
 
-            // Decode token từ URL
             string decodedToken;
             try
             {
@@ -201,49 +175,39 @@ Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua emai
         }
 
 
-        // ==========================================================
-        // HÀM PHỤ TRỢ TẠO TOKEN (Yêu cầu 1.10)
-        // ==========================================================
+    
         private string GenerateJwtToken(User user, IList<string> roles)
         {
-            // 1. Tạo danh sách các "Claims" (thông tin)
             var authClaims = new List<Claim>
             {
                 new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Name, user.FullName),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()), // Lấy User ID
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()) // ID của riêng token này
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()), 
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()) 
             };
 
-            // Thêm các Role (vai trò) vào claims
             foreach (var role in roles)
             {
                 authClaims.Add(new Claim(ClaimTypes.Role, role));
             }
 
-            // 2. Lấy Khóa bí mật (Secret Key) và thông tin Issuer/Audience từ appsettings.json
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var issuer = _configuration["Jwt:Issuer"];
             var audience = _configuration["Jwt:Audience"];
 
-            // 3. Tạo Token
             var token = new JwtSecurityToken(
                 issuer: issuer,
                 audience: audience,
-                expires: DateTime.Now.AddHours(24), // Thời hạn token (ví dụ: 24 giờ)
+                expires: DateTime.Now.AddHours(24),
                 claims: authClaims,
                 signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
             );
 
-            // 4. Ghi token ra dạng chuỗi
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
 
-        // ==========================================================
-        // [QUAN TRỌNG] CHẠY HÀM NÀY MỘT LẦN ĐỂ TẠO CÁC ROLE
-        // POST: api/auth/seed-roles
-        // ==========================================================
+      
         [HttpPost]
         [Route("seed-roles")]
         public async Task<IActionResult> SeedRoles()
@@ -265,7 +229,6 @@ Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua emai
                 await _roleManager.CreateAsync(new IdentityRole<int>("Runner"));
             }
 
-            // (Tùy chọn) Tạo 1 tài khoản Admin đầu tiên
             var adminUser = await _userManager.FindByEmailAsync("admin@marathon.com");
             if (adminUser == null)
             {
@@ -277,7 +240,7 @@ Nếu bạn không yêu cầu đặt lại mật khẩu, vui lòng bỏ qua emai
                     IsActive = true,
                     CreatedAt = DateTime.UtcNow
                 };
-                var result = await _userManager.CreateAsync(admin, "Admin@123"); // Đặt mật khẩu admin
+                var result = await _userManager.CreateAsync(admin, "Admin@123"); 
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(admin, "Admin");

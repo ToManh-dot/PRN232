@@ -18,11 +18,7 @@ namespace MarathonManager.API.Controllers
             _context = context;
         }
 
-        // ==========================================================
-        // PUBLIC ENDPOINTS (AllowAnonymous)
-        // ==========================================================
-
-        // GET: api/races  — danh sách giải đã Approved
+        
         [HttpGet]
         [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<RaceSummaryDto>>> GetRaces()
@@ -45,14 +41,13 @@ namespace MarathonManager.API.Controllers
             return Ok(races);
         }
 
-        // GET: api/races/{id} — chi tiết 1 giải đã Approved
         [HttpGet("{id:int}")]
         [AllowAnonymous]
         public async Task<ActionResult<RaceDetailDto>> GetRace(int id)
         {
             var race = await _context.Races
-               .Include(r => r.Organizer)      // để lấy OrganizerName
-               .Include(r => r.RaceDistances)  // để map Distances
+               .Include(r => r.Organizer)      
+               .Include(r => r.RaceDistances)  
                .Where(r => r.Id == id && r.Status == "Approved")
                .Select(r => new RaceDetailDto
                {
@@ -106,7 +101,6 @@ namespace MarathonManager.API.Controllers
             return Ok(race);
         }
 
-        // PUT: api/races/{id} — Cập nhật thông tin giải
         [HttpPut("{id:int}")]
         [Authorize(Roles = "Organizer")]
         public async Task<IActionResult> UpdateRace(int id, [FromBody] RaceUpdateDto dto)
@@ -125,6 +119,25 @@ namespace MarathonManager.API.Controllers
             await _context.SaveChangesAsync();
 
             return Ok(new { message = "Cập nhật giải chạy thành công" });
+        }
+        // GET: api/races/{raceId}/runners
+        [HttpGet("{raceId:int}/runners")]
+        [Authorize(Roles = "Organizer")]
+        public async Task<ActionResult<IEnumerable<RunnersInRaceDto>>> GetRunnersInRace(int raceId)
+        {
+            var runners = await _context.Registrations
+                .Where(r => r.RaceDistance.RaceId == raceId)
+                .Include(r => r.Runner)
+                .Select(r => new RunnersInRaceDto
+                {
+                    Id = r.Runner.Id,
+                    FullName = r.Runner.FullName,
+                    Email = r.Runner.Email
+                })
+                .Distinct()
+                .ToListAsync();
+
+            return Ok(runners);
         }
 
     }

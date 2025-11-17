@@ -137,7 +137,7 @@
                                             }
                                             else
                                             {
-                                                <form asp-controller="Runner" asp-action="Register" method="post">
+                                                @* <form asp-controller="Runner" asp-action="Register" method="post">
                                                     @Html.AntiForgeryToken()
                                                     <input type="hidden" name="raceId" value="@Model.Id" />
                                                     <input type="hidden" name="raceDistanceId" value="@distance.Id" />
@@ -145,7 +145,7 @@
                                                             onclick="return confirm('Confirm registration for @distance.Name?');">
                                                         <i class="fas fa-user-plus me-2"></i>Register Now
                                                     </button>
-                                                </form>
+                                                </form> *@
                                             }
                                         </div>
                                     </div>

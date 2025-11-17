@@ -181,7 +181,6 @@ public class OrganizerRacesController : ControllerBase
         return NoContent();
     }
 
-    // --- DISTANCES CRUD ---
 
     // GET: api/organizer/races/{raceId}/distances
     [HttpGet("{raceId:int}/distances")]

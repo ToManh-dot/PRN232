@@ -12,10 +12,8 @@
         public string ImageUrl { get; set; }
         public string Status { get; set; }
 
-        // Thêm thông tin người tổ chức (tên)
         public string OrganizerName { get; set; }
 
-        // Chứa danh sách các cự ly thuộc giải chạy này
         public List<RaceDistanceDto> Distances { get; set; } = new List<RaceDistanceDto>();
     }
 }

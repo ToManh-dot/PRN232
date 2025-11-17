@@ -3,6 +3,6 @@
     public class RegistrationCreateDto
     {
         public int RaceDistanceId { get; set; }
-        public int RaceId { get; set; } // Thêm trường này
+        public int RaceId { get; set; } 
     }
 }

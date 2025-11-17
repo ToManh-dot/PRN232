@@ -17,6 +17,10 @@ public partial class Registration
 
     public string? BibNumber { get; set; }
 
+    public string? PaymentMethod { get; set; }      
+    public string? TransactionNo { get; set; }      
+    public DateTime? PaymentDate { get; set; }      
+
     public virtual RaceDistance RaceDistance { get; set; } = null!;
 
     public virtual Result? Result { get; set; }

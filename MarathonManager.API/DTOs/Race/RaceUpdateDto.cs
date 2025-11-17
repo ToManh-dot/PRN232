@@ -2,11 +2,10 @@
 
 namespace MarathonManager.API.DTOs.Race
 {
-    // DTO này dùng khi Organizer/Admin cập nhật giải
     public class RaceUpdateDto
     {
         [Required]
-        public int Id { get; set; } // Cần Id để biết update giải nào
+        public int Id { get; set; } 
 
         [Required(ErrorMessage = "Tên giải chạy không được để trống")]
         [StringLength(200, ErrorMessage = "Tên giải chạy không quá 200 ký tự")]

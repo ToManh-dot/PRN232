@@ -18,15 +18,12 @@ namespace MarathonManager.Web.DTOs
         [DataType(DataType.DateTime)]
         public DateTime RaceDate { get; set; }
 
-        // Gộp DistancesInput & DistancesCsv cho nhất quán
         [Required(ErrorMessage = "Vui lòng nhập khoảng cách chạy (VD: 5,10,21).")]
         [Display(Name = "Khoảng cách (cách nhau bằng dấu phẩy)")]
         public string DistancesInput { get; set; } = string.Empty;
 
-        // API backend nhận key này
         public string? DistancesCsv { get; set; }
 
-        // Form upload ảnh
         [Display(Name = "Ảnh minh họa")]
         public IFormFile? ImageFile { get; set; }
     }

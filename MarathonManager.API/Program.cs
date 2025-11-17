@@ -9,17 +9,15 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-// Add CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowWeb", policy =>
     {
         policy.WithOrigins(
-            "https://localhost:7245", // 👈 cổng web thực tế khi bạn chạy MarathonManager.Web
+            "https://localhost:7245", 
             "http://localhost:7245",
             "https://flor-rasorial-edyth.ngrok-free.dev"
         )
@@ -77,7 +75,8 @@ var connectionString = builder.Configuration.GetConnectionString("MyCnn");
 builder.Services.AddDbContext<MarathonManagerContext>(options =>
     options.UseSqlServer(connectionString));
 
-builder.Services.AddScoped<VnPayLibrary>();
+builder.Services.AddScoped<IVnPayService, VnPayService>();
+
 // 1. Cấu hình Identity
 builder.Services.AddIdentity<User, IdentityRole<int>>(options =>
 {

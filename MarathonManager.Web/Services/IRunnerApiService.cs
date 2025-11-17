@@ -12,5 +12,8 @@ namespace MarathonManager.Web.Services
         Task<ApiResponseDto<PaginatedResponseDto<MyRegistrationDto>>> GetMyRegistrationsAsync(int pageNumber = 1, int pageSize = 10);
         Task<ApiResponseDto<object>> CancelRegistrationAsync(int registrationId);
         Task<ApiResponseDto<PaginatedResponseDto<MyResultDto>>> GetMyResultsAsync(int pageNumber = 1, int pageSize = 10);
+        Task<ApiResponseDto<CreateVnPayPaymentResponseDto>> CreateVnPayPaymentUrlAsync(int registrationId);
+        Task<ApiResponseDto<object>> ConfirmPaymentAsync(int registrationId, string paymentMethod, string? transactionNo);
+
     }
 }

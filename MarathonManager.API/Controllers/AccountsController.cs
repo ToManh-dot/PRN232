@@ -62,12 +62,11 @@ namespace MarathonManager.API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            // Lấy user hiện tại
+         
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
                 return NotFound(new { message = "Không tìm thấy người dùng." });
 
-            // Cập nhật thông tin
             user.FullName = model.FullName;
             user.PhoneNumber = model.PhoneNumber;
             user.DateOfBirth = model.DateOfBirth;
@@ -85,7 +84,7 @@ namespace MarathonManager.API.Controllers
 
         // POST: api/Account/ChangePassword
         [HttpPost("change-password")]
-        [Authorize] // API yêu cầu người dùng phải login (cookie / bearer)
+        [Authorize] 
         public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDto model)
         {
             if (!ModelState.IsValid)
@@ -100,12 +99,10 @@ namespace MarathonManager.API.Controllers
 
             if (!result.Succeeded)
             {
-                // trả về các lỗi để client hiển thị
                 var errors = result.Errors.Select(e => e.Description).ToList();
                 return BadRequest(new { errors });
             }
 
-            // refresh sign-in để cập nhật claims/security stamp
             await _signInManager.RefreshSignInAsync(user);
 
             return Ok(new { message = "Đổi mật khẩu thành công." });

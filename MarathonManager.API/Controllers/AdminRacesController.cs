@@ -1,8 +1,6 @@
 ﻿using MarathonManager.API.DTOs.Race;
-using MarathonManager.API.DTOs.RaceDistances;
 using MarathonManager.API.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

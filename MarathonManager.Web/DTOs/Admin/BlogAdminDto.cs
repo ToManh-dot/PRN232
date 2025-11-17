@@ -1,5 +1,4 @@
-﻿// Trong MarathonManager.Web/DTOs/BlogAdminDto.cs
-namespace MarathonManager.Web.DTOs
+﻿namespace MarathonManager.Web.DTOs
 {
     public class BlogAdminDto
     {

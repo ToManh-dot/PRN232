@@ -19,11 +19,9 @@ namespace MarathonManager.Web.Controllers
             _httpContextAccessor = httpContextAccessor;
         }
 
-        // GET: /Races/Create
         [HttpGet]
         public IActionResult Create() => View();
 
-        // POST: /Races/Create  --> API: POST /api/Races  (multipart/form-data)
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(RaceCreateDto model, IFormFile? imageFile)
@@ -32,7 +30,6 @@ namespace MarathonManager.Web.Controllers
 
             var client = _httpClientFactory.CreateClient("MarathonApi");
 
-            // Lấy JWT từ cookie
             var token = _httpContextAccessor.HttpContext?.Request?.Cookies["AuthToken"];
             if (string.IsNullOrEmpty(token))
             {
@@ -41,7 +38,6 @@ namespace MarathonManager.Web.Controllers
             }
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-            // Chuẩn hoá DistancesCsv: ưu tiên model.DistancesCsv; nếu bạn đang dùng DistancesInput thì chuyển sang CSV
             string distancesCsv = model.DistancesCsv;
             if (string.IsNullOrWhiteSpace(distancesCsv) && !string.IsNullOrWhiteSpace(model.DistancesInput))
             {
@@ -58,8 +54,7 @@ namespace MarathonManager.Web.Controllers
             if (!string.IsNullOrWhiteSpace(distancesCsv))
                 content.Add(new StringContent(distancesCsv), nameof(RaceCreateDto.DistancesCsv));
 
-            // Ảnh: field name PHẢI là "imageFile" theo API
-            var file = imageFile ?? model.ImageFile; // hỗ trợ cả khi View bind vào model.ImageFile
+            var file = imageFile ?? model.ImageFile; 
             if (file != null && file.Length > 0)
             {
                 var fileContent = new StreamContent(file.OpenReadStream());
@@ -72,7 +67,6 @@ namespace MarathonManager.Web.Controllers
             if (response.IsSuccessStatusCode)
             {
                 TempData["SuccessMessage"] = "Tạo giải chạy thành công! Giải đang chờ Admin duyệt.";
-                // Điều hướng về trang quản lý của Organizer
                 return RedirectToAction("Index", "Organizer");
             }
 
@@ -81,7 +75,6 @@ namespace MarathonManager.Web.Controllers
             return View(model);
         }
 
-        // GET: /Races/Detail/5  (public)
         [AllowAnonymous]
         public async Task<IActionResult> Detail(int id)
         {
@@ -103,7 +96,6 @@ namespace MarathonManager.Web.Controllers
         {
             var client = _httpClientFactory.CreateClient("MarathonApi");
 
-            // Lấy JWT từ cookie
             var token = _httpContextAccessor.HttpContext?.Request?.Cookies["AuthToken"];
             if (string.IsNullOrEmpty(token))
             {
@@ -112,14 +104,13 @@ namespace MarathonManager.Web.Controllers
             }
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-            // Gọi API backend
             var response = await client.GetAsync($"/api/races/{raceId}/runners");
 
             if (response.IsSuccessStatusCode)
             {
                 var jsonString = await response.Content.ReadAsStringAsync();
                 var runners = JsonConvert.DeserializeObject<List<RunnersInRaceDto>>(jsonString);
-                return View(runners); // View sẽ nhận List<RunnersInRaceDto>
+                return View(runners); 
             }
 
             TempData["ErrorMessage"] = "Không thể lấy danh sách runner.";

@@ -3,56 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\PRN232\\PRN232-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\controllers\\runnerracescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\runnerracescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\dtos\\auth\\debugresetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\dtos\\auth\\debugresetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\controllers\\racescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\racescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\controllers\\adminapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\adminapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\services\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\services\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\services\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\services\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\services\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\services\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\services\\runnerapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\services\\runnerapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\controllers\\registrationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\registrationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\controllers\\runnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\controllers\\runnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\migrations\\20251116161813_addresetpasswordcolumnstouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\migrations\\20251116161813_addresetpasswordcolumnstouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\dtos\\vnpaydtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\dtos\\vnpaydtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\marathonmanager.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\marathonmanager.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\services\\ivnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\services\\ivnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\dtos\\createvnpaypaymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\dtos\\createvnpaypaymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\services\\smtpemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\services\\smtpemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\views\\runner\\registrationdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\runner\\registrationdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\views\\runner\\racedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\views\\runner\\racedetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.web\\services\\irunnerapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC39A3E4-A132-432A-A958-137731E404F5}|MarathonManager.Web\\MarathonManager.Web.csproj|solutionrelative:marathonmanager.web\\services\\irunnerapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|c:\\users\\dell\\prn232\\prn232-main\\marathonmanager.api\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B948BB1-C906-49E7-BB2D-2F9164484CD7}|MarathonManager.API\\MarathonManager.API.csproj|solutionrelative:marathonmanager.api\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 596,
-          "SelectedChildIndex": 212,
+          "SelectedChildIndex": 217,
           "Children": [
             {
               "$type": "Bookmark",
@@ -870,165 +890,237 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegistrationsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\RegistrationsController.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\RegistrationsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\RegistrationsController.cs",
+              "RelativeToolTip": "MarathonManager.API\\Controllers\\RegistrationsController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAPwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T03:13:01.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DebugResetPasswordDto.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\DTOs\\Auth\\DebugResetPasswordDto.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\DTOs\\Auth\\DebugResetPasswordDto.cs",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\DTOs\\Auth\\DebugResetPasswordDto.cs",
-              "RelativeToolTip": "MarathonManager.API\\DTOs\\Auth\\DebugResetPasswordDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA/AAAAAAAAAA==",
+              "Title": "RacesController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\RacesController.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\RacesController.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\RacesController.cs",
+              "RelativeToolTip": "MarathonManager.API\\Controllers\\RacesController.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAuwJIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T18:54:59.125Z",
+              "WhenOpened": "2025-11-17T02:57:14.103Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminApiController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\AdminApiController.cs",
-              "ViewState": "AgIAAC0BAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T18:45:09.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "MarathonManager.Web\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAE0BAAAAAAAAAADwv2QBAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T18:37:15.818Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Admin\\Index.cshtml",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAwG8AAACLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-16T18:35:11.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\appsettings.json",
               "RelativeDocumentMoniker": "MarathonManager.API\\appsettings.json",
               "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\appsettings.json",
               "RelativeToolTip": "MarathonManager.API\\appsettings.json",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvxsAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-16T16:24:54.637Z",
+              "WhenOpened": "2025-11-17T02:21:31.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ResetPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Account\\ResetPassword.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Account\\ResetPassword.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Account\\ResetPassword.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Account\\ResetPassword.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "RegistrationDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
+              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
+              "RelativeToolTip": "MarathonManager.Web\\Views\\Runner\\RegistrationDetails.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAiwIUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-16T16:23:03.256Z"
+              "WhenOpened": "2025-11-17T02:19:19.188Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ForgotPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Account\\ForgotPassword.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Account\\ForgotPassword.cshtml",
-              "RelativeToolTip": "MarathonManager.Web\\Views\\Account\\ForgotPassword.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "RaceDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
+              "RelativeDocumentMoniker": "MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
+              "RelativeToolTip": "MarathonManager.Web\\Views\\Runner\\RaceDetails.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-16T16:23:01.847Z"
+              "WhenOpened": "2025-11-17T02:18:14.637Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "20251116161813_AddResetPasswordColumnsToUser.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Migrations\\20251116161813_AddResetPasswordColumnsToUser.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Migrations\\20251116161813_AddResetPasswordColumnsToUser.cs",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Migrations\\20251116161813_AddResetPasswordColumnsToUser.cs",
-              "RelativeToolTip": "MarathonManager.API\\Migrations\\20251116161813_AddResetPasswordColumnsToUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T16:18:13.945Z"
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "MarathonManager.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\appsettings.json",
+              "RelativeToolTip": "MarathonManager.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-17T02:15:46.596Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MarathonManager.API.csproj",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\MarathonManager.API.csproj",
-              "RelativeDocumentMoniker": "MarathonManager.API\\MarathonManager.API.csproj",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\MarathonManager.API.csproj",
-              "RelativeToolTip": "MarathonManager.API\\MarathonManager.API.csproj",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-16T16:03:45.921Z"
+              "DocumentIndex": 2,
+              "Title": "VnPayLibrary.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Services\\VnPayLibrary.cs",
+              "RelativeDocumentMoniker": "MarathonManager.Web\\Services\\VnPayLibrary.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Services\\VnPayLibrary.cs",
+              "RelativeToolTip": "MarathonManager.Web\\Services\\VnPayLibrary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T02:15:29.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RunnerApiService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Services\\RunnerApiService.cs",
+              "RelativeDocumentMoniker": "MarathonManager.Web\\Services\\RunnerApiService.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Services\\RunnerApiService.cs",
+              "RelativeToolTip": "MarathonManager.Web\\Services\\RunnerApiService.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAiwIwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T02:13:19.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IRunnerApiService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Services\\IRunnerApiService.cs",
+              "RelativeDocumentMoniker": "MarathonManager.Web\\Services\\IRunnerApiService.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Services\\IRunnerApiService.cs",
+              "RelativeToolTip": "MarathonManager.Web\\Services\\IRunnerApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T02:12:59.817Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Models\\User.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Models\\User.cs",
-              "RelativeToolTip": "MarathonManager.API\\Models\\User.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAywBcAAAAqAAAAAAAAAA==",
+              "Title": "VnPayDtos.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\DTOs\\VnPayDtos.cs",
+              "RelativeDocumentMoniker": "MarathonManager.Web\\DTOs\\VnPayDtos.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\DTOs\\VnPayDtos.cs",
+              "RelativeToolTip": "MarathonManager.Web\\DTOs\\VnPayDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T15:47:20.912Z"
+              "WhenOpened": "2025-11-17T02:12:34.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RunnerController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Controllers\\RunnerController.cs",
+              "RelativeDocumentMoniker": "MarathonManager.Web\\Controllers\\RunnerController.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.Web\\Controllers\\RunnerController.cs",
+              "RelativeToolTip": "MarathonManager.Web\\Controllers\\RunnerController.cs",
+              "ViewState": "AgIAADkBAAAAAAAAAAAIwFcBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T02:11:15.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "VnPayService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Services\\VnPayService.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Services\\VnPayService.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Services\\VnPayService.cs",
+              "RelativeToolTip": "MarathonManager.API\\Services\\VnPayService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAIwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T02:09:11.051Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "SmtpEmailSender.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Services\\SmtpEmailSender.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Services\\SmtpEmailSender.cs",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Services\\SmtpEmailSender.cs",
-              "RelativeToolTip": "MarathonManager.API\\Services\\SmtpEmailSender.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAkwCoAAAAAAAAAAAAAAA==",
+              "Title": "IVnPayService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Services\\IVnPayService.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Services\\IVnPayService.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Services\\IVnPayService.cs",
+              "RelativeToolTip": "MarathonManager.API\\Services\\IVnPayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T15:41:03.07Z"
+              "WhenOpened": "2025-11-17T02:07:52.826Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "MarathonManager.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAADoBAAAAAAAAAAAAwE4BAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "VnPayLibrary.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Services\\VnPayLibrary.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Services\\VnPayLibrary.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Services\\VnPayLibrary.cs",
+              "RelativeToolTip": "MarathonManager.API\\Services\\VnPayLibrary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T15:40:23.903Z",
+              "WhenOpened": "2025-11-17T02:01:49.209Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Program.cs",
-              "RelativeDocumentMoniker": "MarathonManager.API\\Program.cs",
-              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Program.cs",
-              "RelativeToolTip": "MarathonManager.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CreateVnPayPaymentRequest.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\DTOs\\CreateVnPayPaymentRequest.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\DTOs\\CreateVnPayPaymentRequest.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\DTOs\\CreateVnPayPaymentRequest.cs",
+              "RelativeToolTip": "MarathonManager.API\\DTOs\\CreateVnPayPaymentRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-16T15:11:25.882Z"
+              "WhenOpened": "2025-11-17T01:59:40.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Registration.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Models\\Registration.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Models\\Registration.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Models\\Registration.cs",
+              "RelativeToolTip": "MarathonManager.API\\Models\\Registration.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA7wBoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:56:58.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RunnerRacesController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\RunnerRacesController.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\RunnerRacesController.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\RunnerRacesController.cs",
+              "RelativeToolTip": "MarathonManager.API\\Controllers\\RunnerRacesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOsBAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:55:40.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "MarathonManager.API\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\PRN232\\PRN232-main\\MarathonManager.API\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "MarathonManager.API\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T01:39:22.893Z",
+              "EditorCaption": ""
             }
           ]
         },

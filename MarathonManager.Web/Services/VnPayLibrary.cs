@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
-namespace MarathonManager.API 
+namespace MarathonManager.Web   
 {
     public class VnPayLibrary
     {
@@ -110,7 +110,7 @@ namespace MarathonManager.API
             return string.Equals(receivedHash, calculatedHash, StringComparison.OrdinalIgnoreCase);
         }
 
-      
+        
         private string GetHashData(string inputData, string key)
         {
             byte[] keyBytes = Encoding.UTF8.GetBytes(key);

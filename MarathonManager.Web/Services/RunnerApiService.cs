@@ -4,9 +4,7 @@ using System.Net.Http.Headers;
 
 namespace MarathonManager.Web.Services
 {
-    /// <summary>
-    /// Giao tiếp giữa Web và MarathonManager.Api dành cho Runner
-    /// </summary>
+
     public class RunnerApiService : IRunnerApiService
     {
         private readonly HttpClient _httpClient;
@@ -27,6 +25,24 @@ namespace MarathonManager.Web.Services
             {
                 _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             }
+        }
+
+        public async Task<ApiResponseDto<CreateVnPayPaymentResponseDto>> CreateVnPayPaymentUrlAsync(int registrationId)
+        {
+            var payload = new { RegistrationId = registrationId };
+            return await PostAsync<CreateVnPayPaymentResponseDto>("/api/runner/registrations/vnpay/create", payload);
+        }
+
+     
+        public async Task<ApiResponseDto<object>> ConfirmPaymentAsync(int registrationId, string paymentMethod, string? transactionNo)
+        {
+            var payload = new ConfirmPaymentRequestDto
+            {
+                PaymentMethod = paymentMethod,
+                TransactionNo = transactionNo
+            };
+
+            return await PostAsync<object>($"/api/runner/registrations/{registrationId}/confirm-payment", payload);
         }
 
         public async Task<ApiResponseDto<RunnerDashboardDto>> GetDashboardAsync()
@@ -50,7 +66,6 @@ namespace MarathonManager.Web.Services
         public async Task<ApiResponseDto<PaginatedResponseDto<MyResultDto>>> GetMyResultsAsync(int pageNumber = 1, int pageSize = 10)
             => await GetAsync<PaginatedResponseDto<MyResultDto>>($"/api/runner/results?pageNumber={pageNumber}&pageSize={pageSize}");
 
-        // === Generic helper methods ===
 
         private async Task<ApiResponseDto<T>> GetAsync<T>(string url)
         {

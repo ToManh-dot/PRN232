@@ -3,9 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MarathonManager.Web.Interfaces
 {
-    /// <summary>
-    /// Interface định nghĩa các trường chung cho form cự ly (Distance)
-    /// </summary>
+    
     public interface IDistanceFormModel
     {
         [Required(ErrorMessage = "Tên cự ly là bắt buộc")]

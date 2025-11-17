@@ -1,5 +1,4 @@
-﻿// In MarathonManager.API/DTOs/RaceDistances/RaceDistanceUpdateDto.cs
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace MarathonManager.API.DTOs.RaceDistances

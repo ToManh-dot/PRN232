@@ -23,7 +23,7 @@ namespace MarathonManager.API.Controllers
         public async Task<IActionResult> GetRaceDistance(int id)
         {
             var distance = await _context.RaceDistances
-                .Include(rd => rd.Race) // Lấy thông tin giải chạy
+                .Include(rd => rd.Race) 
                 .FirstOrDefaultAsync(rd => rd.Id == id);
 
             if (distance == null)

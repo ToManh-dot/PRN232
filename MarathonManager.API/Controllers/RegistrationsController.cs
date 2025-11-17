@@ -1,10 +1,10 @@
-﻿using MarathonManager.API.DTOs.Registration;
+﻿using MarathonManager.API;
+using MarathonManager.API.DTOs.Registration;
 using MarathonManager.API.Models;
 using MarathonManager.API.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration; // THÊM
 using System.Security.Claims;
 
 [Route("api/[controller]")]
@@ -13,9 +13,9 @@ using System.Security.Claims;
 public class RegistrationsController : ControllerBase
 {
     private readonly MarathonManagerContext _context;
-    private readonly IConfiguration _config; // THÊM
+    private readonly IConfiguration _config; 
 
-    public RegistrationsController(MarathonManagerContext context, IConfiguration config) // THÊM config
+    public RegistrationsController(MarathonManagerContext context, IConfiguration config) 
     {
         _context = context;
         _config = config;
@@ -63,7 +63,6 @@ public class RegistrationsController : ControllerBase
     {
         var runnerId = GetCurrentUserId();
 
-        // Tìm registration của runner
         var registration = await _context.Registrations
             .Include(r => r.RaceDistance)
             .ThenInclude(rd => rd.Race)
@@ -75,7 +74,6 @@ public class RegistrationsController : ControllerBase
         if (registration.PaymentStatus == "Paid")
             return BadRequest(new { message = "Đã thanh toán trước đó." });
 
-        // Cập nhật trạng thái thanh toán
         registration.PaymentStatus = "Paid";
         _context.Registrations.Update(registration);
         await _context.SaveChangesAsync();
@@ -94,7 +92,6 @@ public class RegistrationsController : ControllerBase
         if (reg == null || reg.PaymentStatus != "Pending")
             return BadRequest(new { message = "Không thể thanh toán." });
 
-        // 1️⃣ Kiểm tra ReturnUrl hợp lệ (bắt buộc phải là https hoặc http công khai)
         if (string.IsNullOrWhiteSpace(dto.ReturnUrl) ||
             !Uri.TryCreate(dto.ReturnUrl, UriKind.Absolute, out var uri) ||
             (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
@@ -102,12 +99,10 @@ public class RegistrationsController : ControllerBase
             return BadRequest(new { message = "ReturnUrl không hợp lệ. Phải là URL HTTPS công khai (ngrok hoặc frontend domain)." });
         }
 
-        // 2️⃣ Khởi tạo đối tượng VNPAY
         var vnpay = new VnPayLibrary();
 
-        var amount = (int)(reg.RaceDistance.RegistrationFee * 100); // phải nhân 100 và là số nguyên
+        var amount = (int)(reg.RaceDistance.RegistrationFee * 100); 
 
-        // 3️⃣ Thêm dữ liệu gửi sang VNPAY (theo đúng chuẩn)
         vnpay.AddRequestData("vnp_Version", "2.1.0");
         vnpay.AddRequestData("vnp_Command", "pay");
         vnpay.AddRequestData("vnp_TmnCode", _config["VNPAY:TmnCode"]);
@@ -115,7 +110,6 @@ public class RegistrationsController : ControllerBase
         vnpay.AddRequestData("vnp_CreateDate", DateTime.Now.ToString("yyyyMMddHHmmss"));
         vnpay.AddRequestData("vnp_CurrCode", "VND");
 
-        // Lấy IP thực của client (nếu gọi qua reverse proxy)
         var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1";
         if (ipAddress == "::1") ipAddress = "127.0.0.1";
         vnpay.AddRequestData("vnp_IpAddr", ipAddress);
@@ -124,26 +118,20 @@ public class RegistrationsController : ControllerBase
         vnpay.AddRequestData("vnp_OrderInfo", $"Thanh toan dang ky ID {registrationId}");
         vnpay.AddRequestData("vnp_OrderType", "other");
 
-        // ReturnUrl bắt buộc không chứa space, encode kỹ
         vnpay.AddRequestData("vnp_ReturnUrl", dto.ReturnUrl.Trim());
 
-        // TxnRef phải là chuỗi ngắn, không ký tự đặc biệt
         vnpay.AddRequestData("vnp_TxnRef", registrationId.ToString());
 
-        // 4️⃣ Tạo URL
         string paymentUrl = vnpay.CreateRequestUrl(
             _config["VNPAY:Url"],
             _config["VNPAY:HashSecret"]
         );
 
-        // 5️⃣ In log để dễ debug
         Console.WriteLine("🔗 VNPAY Payment URL: " + paymentUrl);
 
-        // 6️⃣ Trả về frontend
         return Ok(new { paymentUrl });
     }
 
-    // GET: api/Registrations/return
     [HttpGet("return")]
     [AllowAnonymous]
     public async Task<IActionResult> PaymentReturn()
@@ -224,7 +212,7 @@ public class RegistrationsController : ControllerBase
             .MaxAsync() + 1;
 
         foreach (var reg in paidNoBib)
-            reg.BibNumber = nextBib++.ToString("D4"); // 1001, 1002...
+            reg.BibNumber = nextBib++.ToString("D4"); 
 
         await _context.SaveChangesAsync();
 
@@ -257,15 +245,11 @@ public class RegistrationsController : ControllerBase
         {"vnp_ResponseCode", "00"}
     };
 
-        // Build data string để hash
         var hashData = string.Join("&", queryParams.Select(kvp => $"{kvp.Key}={kvp.Value}"));
-
-        // Tạo chữ ký SHA256
         using var hmac = new System.Security.Cryptography.HMACSHA256(System.Text.Encoding.UTF8.GetBytes(hashSecret));
         var hashBytes = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(hashData));
         string secureHash = BitConverter.ToString(hashBytes).Replace("-", "");
 
-        // Thêm chữ ký vào URL
         var baseUrl = "http://localhost:5000/payment/return";
         var fullUrl = $"{baseUrl}?{hashData}&vnp_SecureHash={secureHash}";
         return Ok(fullUrl);

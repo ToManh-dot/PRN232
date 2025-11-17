@@ -2,6 +2,7 @@
 using MarathonManager.API.DTOs.Race;
 using MarathonManager.API.DTOs.RaceDistances;
 using MarathonManager.API.Models;
+using MarathonManager.API.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,11 +16,18 @@ namespace MarathonManager.API.Controllers;
 public class RunnerRacesController : ControllerBase
 {
     private readonly MarathonManagerContext _context;
+    
+    private readonly IVnPayService _vnPayService;
 
-    public RunnerRacesController(MarathonManagerContext context)
+    public RunnerRacesController(MarathonManagerContext context, IVnPayService vnPayService)
     {
         _context = context;
+  
+        _vnPayService = vnPayService;
     }
+
+
+
 
     // GET: api/runner/dashboard
     [HttpGet("dashboard")]
@@ -359,6 +367,139 @@ public class RunnerRacesController : ControllerBase
             });
         }
     }
+    // POST: api/runner/registrations/vnpay/create
+    [HttpPost("registrations/vnpay/create")]
+    public async Task<ActionResult<ApiResponse<CreateVnPayPaymentResponse>>> CreateVnPayPayment(
+        [FromBody] CreateVnPayPaymentRequest request)
+    {
+        var userId = GetCurrentUserId();
+
+        try
+        {
+            var registration = await _context.Registrations
+                .Include(r => r.RaceDistance).ThenInclude(rd => rd.Race)
+                .FirstOrDefaultAsync(r => r.Id == request.RegistrationId && r.RunnerId == userId);
+
+            if (registration == null)
+            {
+                return NotFound(new ApiResponse<CreateVnPayPaymentResponse>
+                {
+                    Success = false,
+                    Message = "Registration not found"
+                });
+            }
+
+            if (registration.PaymentStatus == "Paid")
+            {
+                return BadRequest(new ApiResponse<CreateVnPayPaymentResponse>
+                {
+                    Success = false,
+                    Message = "Registration already paid"
+                });
+            }
+
+            if (registration.PaymentStatus == "Cancelled")
+            {
+                return BadRequest(new ApiResponse<CreateVnPayPaymentResponse>
+                {
+                    Success = false,
+                    Message = "Registration has been cancelled"
+                });
+            }
+
+            var ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1";
+
+            string paymentUrl = _vnPayService.CreatePaymentUrl(registration, ipAddress);
+
+            if (registration.PaymentStatus != "Pending")
+            {
+                registration.PaymentStatus = "Pending";
+                await _context.SaveChangesAsync();
+            }
+
+            return Ok(new ApiResponse<CreateVnPayPaymentResponse>
+            {
+                Success = true,
+                Data = new CreateVnPayPaymentResponse
+                {
+                    PaymentUrl = paymentUrl
+                }
+            });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new ApiResponse<CreateVnPayPaymentResponse>
+            {
+                Success = false,
+                Message = "An error occurred while creating VNPAY payment",
+                Errors = new List<string> { ex.Message }
+            });
+        }
+    }
+
+    [HttpPost("registrations/{id:int}/confirm-payment")]
+    public async Task<ActionResult<ApiResponse<object>>> ConfirmPayment(
+     int id,
+     [FromBody] ConfirmPaymentRequest request)
+    {
+        var userId = GetCurrentUserId();
+
+        try
+        {
+            var reg = await _context.Registrations
+                .FirstOrDefaultAsync(r => r.Id == id && r.RunnerId == userId);
+
+            if (reg == null)
+            {
+                return NotFound(new ApiResponse<object>
+                {
+                    Success = false,
+                    Message = "Registration not found"
+                });
+            }
+
+            if (reg.PaymentStatus == "Paid")
+            {
+                return BadRequest(new ApiResponse<object>
+                {
+                    Success = false,
+                    Message = "Registration already paid"
+                });
+            }
+
+            if (reg.PaymentStatus == "Cancelled")
+            {
+                return BadRequest(new ApiResponse<object>
+                {
+                    Success = false,
+                    Message = "Registration has been cancelled"
+                });
+            }
+
+            reg.PaymentStatus = "Paid";
+            reg.PaymentMethod = request.PaymentMethod;
+            reg.TransactionNo = request.TransactionNo;
+            reg.PaymentDate = DateTime.Now; 
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new ApiResponse<object>
+            {
+                Success = true,
+                Message = "Payment confirmed"
+            });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new ApiResponse<object>
+            {
+                Success = false,
+                Message = "An error occurred while confirming payment",
+                Errors = new List<string> { ex.Message }
+            });
+        }
+    }
+
 
     private int GetCurrentUserId()
     {
